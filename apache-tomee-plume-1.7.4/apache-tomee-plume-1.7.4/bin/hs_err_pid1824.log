@@ -1,0 +1,1034 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000000110383e34, pid=1824, tid=29195
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_65-b17) (build 1.8.0_65-b17)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.65-b01 mixed mode bsd-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.dylib+0x321e34]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f83f28a8800):  JavaThread "http-bio-8080-exec-5" daemon [_thread_in_vm, id=29195, stack(0x000070000de13000,0x000070000df13000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000110941540, RBX=0x00007f83f28a8800, RCX=0x0000000110877310, RDX=0x0000000000000004
+RSP=0x000070000df0a310, RBP=0x000070000df0a320, RSI=0x00007f83f28a8800, RDI=0x0000000000000000
+R8 =0x0000000111007840, R9 =0x000070000df0a8c0, R10=0x0000000111007e38, R11=0x000000011053e4cf
+R12=0x000070000df0a3a0, R13=0x000070000df0a390, R14=0x00007f83f28a89f8, R15=0x00007f83f28a8800
+RIP=0x0000000110383e34, EFLAGS=0x0000000000010246, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x000070000df0a310)
+0x000070000df0a310:   0000000000000000 00007f83f28a89f8
+0x000070000df0a320:   000070000df0a380 0000000110373379
+0x000070000df0a330:   0000000110ff05d0 00007f83f28a8800
+0x000070000df0a340:   0000000000000000 000070000df0a3f0
+0x000070000df0a350:   000070000df0a390 00007f83f28a8800
+0x000070000df0a360:   00007f83f28a8800 0000000000000000
+0x000070000df0a370:   00007f83f28a89f8 00007f83f28a8800
+0x000070000df0a380:   000070000df0a3d0 00000001105d8d98
+0x000070000df0a390:   00007f83f28a8800 00007f83f28a8800
+0x000070000df0a3a0:   00007f83f28a8800 000000012906d6d0
+0x000070000df0a3b0:   0000000000000000 000000012906d6c8
+0x000070000df0a3c0:   000070000df0a458 00007f83f28a8800
+0x000070000df0a3d0:   000070000df0a430 0000000111007e64
+0x000070000df0a3e0:   00000000000080b0 0000000111007a39
+0x000070000df0a3f0:   000070000df0a3f0 000000012906d6c8
+0x000070000df0a400:   000070000df0a458 000000012909a170
+0x000070000df0a410:   0000000000000000 000000012906d6d0
+0x000070000df0a420:   0000000000000000 000070000df0a450
+0x000070000df0a430:   000070000df0a4c0 0000000110feb7a7
+0x000070000df0a440:   0000000000000000 0000000110ffe7db
+0x000070000df0a450:   0000000000000000 00000006c004eb98
+0x000070000df0a460:   0000000100001fa0 000000000000000c
+0x000070000df0a470:   00007f83f28a8800 0000000000000002
+0x000070000df0a480:   0000000110feb71f 000000012906d6d0
+0x000070000df0a490:   000070000df0a558 000070000df0a8b0
+0x000070000df0a4a0:   000000060000000c 000000012906d6d0
+0x000070000df0a4b0:   0000000111007840 000070000df0a8c0
+0x000070000df0a4c0:   000070000df0a670 000000011034cb02
+0x000070000df0a4d0:   0000000100000002 00007f83f28a8800
+0x000070000df0a4e0:   000070000df0ac70 000070000df0a8b0
+0x000070000df0a4f0:   00007f83f13d8e70 0000000111007840
+0x000070000df0a500:   010000012906db58 000070000df0a8b8 
+
+Instructions: (pc=0x0000000110383e34)
+0x0000000110383e14:   49 8b 8c 24 48 04 00 00 48 8d 35 bf 12 2d 00 ba
+0x0000000110383e24:   17 06 00 00 eb a7 55 48 89 e5 41 56 53 48 89 f3
+0x0000000110383e34:   48 8b 3f e8 88 9b fc ff 49 89 c6 49 8b 06 31 f6
+0x0000000110383e44:   4c 89 f7 48 89 da ff 50 78 48 83 7b 08 00 75 16 
+
+Register to memory mapping:
+
+RAX=0x0000000110941540: _ZN20SafepointSynchronize6_stateE+0 in /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/server/libjvm.dylib at 0x0000000110062000
+RBX=0x00007f83f28a8800 is a thread
+RCX=0x0000000110877310: UseMembar+0 in /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/server/libjvm.dylib at 0x0000000110062000
+RDX=0x0000000000000004 is an unknown value
+RSP=0x000070000df0a310 is pointing into the stack for thread: 0x00007f83f28a8800
+RBP=0x000070000df0a320 is pointing into the stack for thread: 0x00007f83f28a8800
+RSI=0x00007f83f28a8800 is a thread
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000111007840 is at code_begin+0 in an Interpreter codelet
+method entry point (kind = native)  [0x0000000111007840, 0x0000000111008760]  3872 bytes
+R9 =0x000070000df0a8c0 is pointing into the stack for thread: 0x00007f83f28a8800
+R10=0x0000000111007e38 is at code_begin+1528 in an Interpreter codelet
+method entry point (kind = native)  [0x0000000111007840, 0x0000000111008760]  3872 bytes
+R11=0x000000011053e4cf: throw_unsatisfied_link_error+0 in /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/server/libjvm.dylib at 0x0000000110062000
+R12=0x000070000df0a3a0 is pointing into the stack for thread: 0x00007f83f28a8800
+R13=0x000070000df0a390 is pointing into the stack for thread: 0x00007f83f28a8800
+R14=0x00007f83f28a89f8 is an unknown value
+R15=0x00007f83f28a8800 is a thread
+
+
+Stack: [0x000070000de13000,0x000070000df13000],  sp=0x000070000df0a310,  free space=988k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.dylib+0x321e34]
+V  [libjvm.dylib+0x311379]
+V  [libjvm.dylib+0x576d98]
+j  sun.misc.Unsafe.allocateInstance(Ljava/lang/Class;)Ljava/lang/Object;+0
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab02]
+V  [libjvm.dylib+0x4caf38]
+V  [libjvm.dylib+0x4cb46c]
+V  [libjvm.dylib+0x342cb4]
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.util.proxy.LocalBeanProxyFactory$Unsafe.allocateInstance(Ljava/lang/Class;)Ljava/lang/Object;+14
+j  org.apache.openejb.util.proxy.LocalBeanProxyFactory$Unsafe.access$000(Ljava/lang/Class;)Ljava/lang/Object;+1
+j  org.apache.openejb.util.proxy.LocalBeanProxyFactory.constructProxy(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;+1
+j  org.apache.openejb.core.ivm.EjbHomeProxyHandler.createProxy(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;+89
+j  org.apache.openejb.core.ivm.EjbHomeProxyHandler.create(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+165
+j  org.apache.openejb.core.ivm.EjbHomeProxyHandler._invoke(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+138
+j  org.apache.openejb.core.ivm.BaseEjbProxyHandler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+506
+j  com.sun.proxy.$Proxy136.create()Ljava/lang/Object;+9
+j  org.apache.openejb.core.ivm.naming.BusinessLocalBeanReference.getObject()Ljava/lang/Object;+4
+j  org.apache.openejb.core.ivm.naming.IvmContext.lookup(Ljava/lang/String;)Ljava/lang/Object;+355
+j  org.apache.openejb.core.ivm.naming.IntraVmJndiReference.getObject()Ljava/lang/Object;+23
+j  org.apache.openejb.core.ivm.naming.IvmContext.lookup(Ljava/lang/String;)Ljava/lang/Object;+355
+j  org.apache.openejb.core.ivm.ContextHandler.lookup(Ljava/lang/String;)Ljava/lang/Object;+5
+j  org.apache.openejb.InjectionProcessor.fillInjectionProperties(Lorg/apache/xbean/recipe/ObjectRecipe;)V+140
+j  org.apache.openejb.InjectionProcessor.construct()V+87
+j  org.apache.openejb.InjectionProcessor.createInstance()Ljava/lang/Object;+8
+j  org.apache.openejb.BeanContext.newInstance()Lorg/apache/openejb/core/InstanceContext;+241
+j  org.apache.openejb.core.stateless.StatelessInstanceManager.createInstance(Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/BeanContext;)Lorg/apache/openejb/core/stateless/Instance;+1
+j  org.apache.openejb.core.stateless.StatelessInstanceManager.getInstance(Lorg/apache/openejb/core/ThreadContext;)Lorg/apache/openejb/core/stateless/Instance;+130
+j  org.apache.openejb.core.stateless.StatelessContainer.invoke(Ljava/lang/Object;Lorg/apache/openejb/InterfaceType;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+417
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.synchronizedBusinessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+19
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.businessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+148
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler._invoke(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+168
+j  org.apache.openejb.core.ivm.BaseEjbProxyHandler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+506
+j  com.drmwsh.banking.ejb.domain.ApplicationSchedulerEjb$$LocalBeanProxy.restartScheduler(Lcom/drmwsh/banking/dtos/SchedulerParameterDto;Lcom/drmwsh/banking/domain/entity/SchedulerTimeTb;Ljava/lang/String;)V+51
+j  com.drmwsh.banking.ejb.domain.SchedulerEjb.restartScheduler(Lcom/drmwsh/banking/dtos/SchedulerParameterDto;Lcom/drmwsh/banking/domain/entity/SchedulerTimeTb;Ljava/lang/String;)V+36
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab02]
+V  [libjvm.dylib+0x4caf38]
+V  [libjvm.dylib+0x4cb46c]
+V  [libjvm.dylib+0x342cb4]
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.monitoring.StatsInterceptor.record(Ljavax/interceptor/InvocationContext;Ljava/lang/reflect/Method;)Ljava/lang/Object;+32
+j  org.apache.openejb.monitoring.StatsInterceptor.invoke(Ljavax/interceptor/InvocationContext;)Ljava/lang/Object;+3
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab02]
+V  [libjvm.dylib+0x4caf38]
+V  [libjvm.dylib+0x4cb46c]
+V  [libjvm.dylib+0x342cb4]
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.core.interceptor.InterceptorStack.invoke([Ljava/lang/Object;)Ljava/lang/Object;+24
+j  org.apache.openejb.core.stateless.StatelessContainer._invoke(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;[Ljava/lang/Object;Lorg/apache/openejb/core/stateless/Instance;Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/InterfaceType;)Ljava/lang/Object;+110
+j  org.apache.openejb.core.stateless.StatelessContainer.invoke(Ljava/lang/Object;Lorg/apache/openejb/InterfaceType;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+487
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.synchronizedBusinessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+19
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.businessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+148
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler._invoke(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+168
+j  org.apache.openejb.core.ivm.BaseEjbProxyHandler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+506
+j  com.drmwsh.banking.ejb.domain.SchedulerEjb$$LocalBeanProxy.restartScheduler(Lcom/drmwsh/banking/dtos/SchedulerParameterDto;Lcom/drmwsh/banking/domain/entity/SchedulerTimeTb;Ljava/lang/String;)V+51
+j  com.drmwsh.banking.service.fmbank.SchedulerService.getAllScheduler()V+506
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab02]
+V  [libjvm.dylib+0x4caf38]
+V  [libjvm.dylib+0x4cb46c]
+V  [libjvm.dylib+0x342cb4]
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$LifecycleInvocation.invoke()Ljava/lang/Object;+1
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.monitoring.StatsInterceptor.record(Ljavax/interceptor/InvocationContext;Ljava/lang/reflect/Method;)Ljava/lang/Object;+32
+j  org.apache.openejb.monitoring.StatsInterceptor.PostConstruct(Ljavax/interceptor/InvocationContext;)V+6
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2eab02]
+V  [libjvm.dylib+0x4caf38]
+V  [libjvm.dylib+0x4cb46c]
+V  [libjvm.dylib+0x342cb4]
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.core.interceptor.InterceptorStack.invoke([Ljava/lang/Object;)Ljava/lang/Object;+24
+j  org.apache.openejb.BeanContext.newInstance()Lorg/apache/openejb/core/InstanceContext;+960
+j  org.apache.openejb.core.singleton.SingletonInstanceManager.createInstance(Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/BeanContext;)Lorg/apache/openejb/core/singleton/Instance;+6
+...<more frames>...
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.misc.Unsafe.allocateInstance(Ljava/lang/Class;)Ljava/lang/Object;+0
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.util.proxy.LocalBeanProxyFactory$Unsafe.allocateInstance(Ljava/lang/Class;)Ljava/lang/Object;+14
+j  org.apache.openejb.util.proxy.LocalBeanProxyFactory$Unsafe.access$000(Ljava/lang/Class;)Ljava/lang/Object;+1
+j  org.apache.openejb.util.proxy.LocalBeanProxyFactory.constructProxy(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;+1
+j  org.apache.openejb.core.ivm.EjbHomeProxyHandler.createProxy(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;+89
+j  org.apache.openejb.core.ivm.EjbHomeProxyHandler.create(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+165
+j  org.apache.openejb.core.ivm.EjbHomeProxyHandler._invoke(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+138
+j  org.apache.openejb.core.ivm.BaseEjbProxyHandler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+506
+j  com.sun.proxy.$Proxy136.create()Ljava/lang/Object;+9
+j  org.apache.openejb.core.ivm.naming.BusinessLocalBeanReference.getObject()Ljava/lang/Object;+4
+j  org.apache.openejb.core.ivm.naming.IvmContext.lookup(Ljava/lang/String;)Ljava/lang/Object;+355
+j  org.apache.openejb.core.ivm.naming.IntraVmJndiReference.getObject()Ljava/lang/Object;+23
+j  org.apache.openejb.core.ivm.naming.IvmContext.lookup(Ljava/lang/String;)Ljava/lang/Object;+355
+j  org.apache.openejb.core.ivm.ContextHandler.lookup(Ljava/lang/String;)Ljava/lang/Object;+5
+j  org.apache.openejb.InjectionProcessor.fillInjectionProperties(Lorg/apache/xbean/recipe/ObjectRecipe;)V+140
+j  org.apache.openejb.InjectionProcessor.construct()V+87
+j  org.apache.openejb.InjectionProcessor.createInstance()Ljava/lang/Object;+8
+j  org.apache.openejb.BeanContext.newInstance()Lorg/apache/openejb/core/InstanceContext;+241
+j  org.apache.openejb.core.stateless.StatelessInstanceManager.createInstance(Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/BeanContext;)Lorg/apache/openejb/core/stateless/Instance;+1
+j  org.apache.openejb.core.stateless.StatelessInstanceManager.getInstance(Lorg/apache/openejb/core/ThreadContext;)Lorg/apache/openejb/core/stateless/Instance;+130
+j  org.apache.openejb.core.stateless.StatelessContainer.invoke(Ljava/lang/Object;Lorg/apache/openejb/InterfaceType;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+417
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.synchronizedBusinessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+19
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.businessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+148
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler._invoke(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+168
+j  org.apache.openejb.core.ivm.BaseEjbProxyHandler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+506
+j  com.drmwsh.banking.ejb.domain.ApplicationSchedulerEjb$$LocalBeanProxy.restartScheduler(Lcom/drmwsh/banking/dtos/SchedulerParameterDto;Lcom/drmwsh/banking/domain/entity/SchedulerTimeTb;Ljava/lang/String;)V+51
+j  com.drmwsh.banking.ejb.domain.SchedulerEjb.restartScheduler(Lcom/drmwsh/banking/dtos/SchedulerParameterDto;Lcom/drmwsh/banking/domain/entity/SchedulerTimeTb;Ljava/lang/String;)V+36
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.monitoring.StatsInterceptor.record(Ljavax/interceptor/InvocationContext;Ljava/lang/reflect/Method;)Ljava/lang/Object;+32
+j  org.apache.openejb.monitoring.StatsInterceptor.invoke(Ljavax/interceptor/InvocationContext;)Ljava/lang/Object;+3
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.core.interceptor.InterceptorStack.invoke([Ljava/lang/Object;)Ljava/lang/Object;+24
+j  org.apache.openejb.core.stateless.StatelessContainer._invoke(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;[Ljava/lang/Object;Lorg/apache/openejb/core/stateless/Instance;Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/InterfaceType;)Ljava/lang/Object;+110
+j  org.apache.openejb.core.stateless.StatelessContainer.invoke(Ljava/lang/Object;Lorg/apache/openejb/InterfaceType;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+487
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.synchronizedBusinessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+19
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler.businessMethod(Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+148
+j  org.apache.openejb.core.ivm.EjbObjectProxyHandler._invoke(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+168
+j  org.apache.openejb.core.ivm.BaseEjbProxyHandler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+506
+j  com.drmwsh.banking.ejb.domain.SchedulerEjb$$LocalBeanProxy.restartScheduler(Lcom/drmwsh/banking/dtos/SchedulerParameterDto;Lcom/drmwsh/banking/domain/entity/SchedulerTimeTb;Ljava/lang/String;)V+51
+j  com.drmwsh.banking.service.fmbank.SchedulerService.getAllScheduler()V+506
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$LifecycleInvocation.invoke()Ljava/lang/Object;+1
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.monitoring.StatsInterceptor.record(Ljavax/interceptor/InvocationContext;Ljava/lang/reflect/Method;)Ljava/lang/Object;+32
+j  org.apache.openejb.monitoring.StatsInterceptor.PostConstruct(Ljavax/interceptor/InvocationContext;)V+6
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.core.interceptor.InterceptorStack.invoke([Ljava/lang/Object;)Ljava/lang/Object;+24
+j  org.apache.openejb.BeanContext.newInstance()Lorg/apache/openejb/core/InstanceContext;+960
+j  org.apache.openejb.core.singleton.SingletonInstanceManager.createInstance(Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/BeanContext;)Lorg/apache/openejb/core/singleton/Instance;+6
+j  org.apache.openejb.core.singleton.SingletonInstanceManager.access$100(Lorg/apache/openejb/core/singleton/SingletonInstanceManager;Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/BeanContext;)Lorg/apache/openejb/core/singleton/Instance;+3
+j  org.apache.openejb.core.singleton.SingletonInstanceManager$1.call()Lorg/apache/openejb/core/singleton/Instance;+12
+j  org.apache.openejb.core.singleton.SingletonInstanceManager$1.call()Ljava/lang/Object;+1
+j  java.util.concurrent.FutureTask.run$$$capture()V+42
+j  java.util.concurrent.FutureTask.run()V+5
+j  org.apache.openejb.core.singleton.SingletonInstanceManager.getInstance(Lorg/apache/openejb/core/ThreadContext;)Lorg/apache/openejb/core/singleton/Instance;+77
+j  org.apache.openejb.core.singleton.SingletonInstanceManager.initialize(Lorg/apache/openejb/BeanContext;)V+17
+j  org.apache.openejb.core.singleton.SingletonInstanceManager.start(Lorg/apache/openejb/BeanContext;)V+9
+j  org.apache.openejb.core.singleton.SingletonContainer.start(Lorg/apache/openejb/BeanContext;)V+5
+j  org.apache.openejb.assembler.classic.Assembler.startEjbs(ZLjava/util/List;)V+367
+j  org.apache.openejb.assembler.classic.Assembler.createApplication(Lorg/apache/openejb/assembler/classic/AppInfo;Ljava/lang/ClassLoader;Z)Lorg/apache/openejb/AppContext;+816
+j  org.apache.openejb.assembler.classic.Assembler.createApplication(Lorg/apache/openejb/assembler/classic/AppInfo;Ljava/lang/ClassLoader;)Lorg/apache/openejb/AppContext;+4
+j  org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(Lorg/apache/catalina/core/StandardContext;)V+928
+j  org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(Lorg/apache/catalina/core/StandardContext;)V+41
+j  org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(Lorg/apache/catalina/LifecycleEvent;)V+299
+j  org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(Ljava/lang/String;Ljava/lang/Object;)V+37
+j  org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(Ljava/lang/String;Ljava/lang/Object;)V+6
+j  org.apache.catalina.core.StandardContext.startInternal()V+590
+j  org.apache.catalina.util.LifecycleBase.start()V+210
+j  org.apache.catalina.core.ContainerBase.addChildInternal(Lorg/apache/catalina/Container;)V+170
+j  org.apache.catalina.core.ContainerBase.addChild(Lorg/apache/catalina/Container;)V+26
+j  org.apache.catalina.core.StandardHost.addChild(Lorg/apache/catalina/Container;)V+40
+j  org.apache.tomee.catalina.TomcatWebAppBuilder.deployWar(Lorg/apache/catalina/core/StandardContext;Ljava/lang/String;Lorg/apache/openejb/assembler/classic/AppInfo;)V+100
+j  org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps(Lorg/apache/openejb/assembler/classic/AppInfo;Ljava/lang/ClassLoader;)V+1024
+j  org.apache.tomee.catalina.deployment.TomcatWebappDeployer.deploy(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Lorg/apache/openejb/assembler/classic/AppInfo;+30
+j  org.apache.openejb.assembler.DeployerEjb.deploy(Ljava/lang/String;Ljava/util/Properties;)Lorg/apache/openejb/assembler/classic/AppInfo;+158
+v  ~StubRoutines::call_stub
+J 1350  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x00000001114e1c77 [0x00000001114e1c00+0x77]
+J 1349 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x00000001114eff4c [0x00000001114eed40+0x120c]
+J 2531 C2 sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (10 bytes) @ 0x00000001118dd1f4 [0x00000001118dd1a0+0x54]
+J 817 C1 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00000001112fb504 [0x00000001112fb0e0+0x424]
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.security.internal.InternalSecurityInterceptor.invoke(Ljavax/interceptor/InvocationContext;)Ljava/lang/Object;+25
+v  ~StubRoutines::call_stub
+J 1350  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x00000001114e1c77 [0x00000001114e1c00+0x77]
+J 1349 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x00000001114eff4c [0x00000001114eed40+0x120c]
+J 2531 C2 sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (10 bytes) @ 0x00000001118dd1f4 [0x00000001118dd1a0+0x54]
+J 817 C1 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00000001112fb504 [0x00000001112fb0e0+0x424]
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.monitoring.StatsInterceptor.record(Ljavax/interceptor/InvocationContext;Ljava/lang/reflect/Method;)Ljava/lang/Object;+32
+j  org.apache.openejb.monitoring.StatsInterceptor.invoke(Ljavax/interceptor/InvocationContext;)Ljava/lang/Object;+3
+v  ~StubRoutines::call_stub
+J 1350  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x00000001114e1c77 [0x00000001114e1c00+0x77]
+J 1349 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x00000001114eff4c [0x00000001114eed40+0x120c]
+J 2531 C2 sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (10 bytes) @ 0x00000001118dd1f4 [0x00000001118dd1a0+0x54]
+J 817 C1 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00000001112fb504 [0x00000001112fb0e0+0x424]
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke()Ljava/lang/Object;+12
+j  org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed()Ljava/lang/Object;+6
+j  org.apache.openejb.core.interceptor.InterceptorStack.invoke([Ljava/lang/Object;)Ljava/lang/Object;+24
+j  org.apache.openejb.core.stateless.StatelessContainer._invoke(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;[Ljava/lang/Object;Lorg/apache/openejb/core/stateless/Instance;Lorg/apache/openejb/core/ThreadContext;Lorg/apache/openejb/InterfaceType;)Ljava/lang/Object;+110
+j  org.apache.openejb.core.stateless.StatelessContainer.invoke(Ljava/lang/Object;Lorg/apache/openejb/InterfaceType;Ljava/lang/Class;Ljava/lang/reflect/Method;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+487
+j  org.apache.openejb.server.ejbd.EjbRequestHandler.doEjbObject_BUSINESS_METHOD(Lorg/apache/openejb/client/EJBRequest;Lorg/apache/openejb/client/EJBResponse;)V+117
+j  org.apache.openejb.server.ejbd.EjbRequestHandler.processRequest(Ljava/io/ObjectInputStream;Lorg/apache/openejb/client/ProtocolMetaData;)Lorg/apache/openejb/client/Response;+660
+j  org.apache.openejb.server.ejbd.EjbDaemon.processEjbRequest(Ljava/io/ObjectInputStream;Lorg/apache/openejb/client/ProtocolMetaData;)Lorg/apache/openejb/client/Response;+6
+j  org.apache.openejb.server.ejbd.EjbDaemon.service(Ljava/io/InputStream;Ljava/io/OutputStream;)V+532
+j  org.apache.openejb.server.ejbd.EjbServer.service(Ljava/io/InputStream;Ljava/io/OutputStream;)V+33
+j  org.apache.openejb.server.httpd.ServerServlet.service(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V+45
+j  javax.servlet.http.HttpServlet.service(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+30
+j  org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+446
+j  org.apache.catalina.core.ApplicationFilterChain.doFilter(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V+101
+j  org.apache.catalina.core.StandardWrapperValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+786
+j  org.apache.catalina.core.StandardContextValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+166
+j  org.apache.tomee.catalina.OpenEJBValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+30
+j  org.apache.catalina.core.StandardHostValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+158
+j  org.apache.catalina.valves.ErrorReportValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+6
+j  org.apache.catalina.valves.AccessLogValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+6
+j  org.apache.catalina.core.StandardEngineValve.invoke(Lorg/apache/catalina/connector/Request;Lorg/apache/catalina/connector/Response;)V+71
+j  org.apache.catalina.connector.CoyoteAdapter.service(Lorg/apache/coyote/Request;Lorg/apache/coyote/Response;)V+199
+j  org.apache.coyote.http11.AbstractHttp11Processor.process(Lorg/apache/tomcat/util/net/SocketWrapper;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+634
+j  org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(Lorg/apache/tomcat/util/net/SocketWrapper;Lorg/apache/tomcat/util/net/SocketStatus;)Lorg/apache/tomcat/util/net/AbstractEndpoint$Handler$SocketState;+281
+j  org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run()V+130
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run()V+4
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f83f1ab6000 JavaThread "Thread-31" daemon [_thread_blocked, id=99587, stack(0x0000700017ef0000,0x0000700017ff0000)]
+  0x00007f83f112e800 JavaThread "org.apache.openejb.pool.scheduler.162" daemon [_thread_blocked, id=113667, stack(0x0000700017ded000,0x0000700017eed000)]
+  0x00007f83f1ab5000 JavaThread "org.apache.openejb.pool.scheduler.161" daemon [_thread_blocked, id=114179, stack(0x0000700017cea000,0x0000700017dea000)]
+  0x00007f83fa8a3800 JavaThread "org.apache.openejb.pool.scheduler.160" daemon [_thread_blocked, id=114691, stack(0x0000700017be7000,0x0000700017ce7000)]
+  0x00007f83f2b63000 JavaThread "org.apache.openejb.pool.scheduler.159" daemon [_thread_blocked, id=114947, stack(0x0000700017ae4000,0x0000700017be4000)]
+  0x00007f83f1ab4800 JavaThread "org.apache.openejb.pool.scheduler.158" daemon [_thread_blocked, id=115203, stack(0x00007000179e1000,0x0000700017ae1000)]
+  0x00007f83f2b62800 JavaThread "org.apache.openejb.pool.scheduler.157" daemon [_thread_blocked, id=98563, stack(0x00007000178de000,0x00007000179de000)]
+  0x00007f83fa8a3000 JavaThread "org.apache.openejb.pool.scheduler.156" daemon [_thread_blocked, id=115715, stack(0x00007000177db000,0x00007000178db000)]
+  0x00007f83f1ab3800 JavaThread "org.apache.openejb.pool.scheduler.155" daemon [_thread_blocked, id=98307, stack(0x00007000176d8000,0x00007000177d8000)]
+  0x00007f83f2b61800 JavaThread "org.apache.openejb.pool.scheduler.154" daemon [_thread_blocked, id=98051, stack(0x00007000175d5000,0x00007000176d5000)]
+  0x00007f83f112d800 JavaThread "org.apache.openejb.pool.scheduler.153" daemon [_thread_blocked, id=97795, stack(0x00007000174d2000,0x00007000175d2000)]
+  0x00007f83f1dce800 JavaThread "org.apache.openejb.pool.scheduler.152" daemon [_thread_blocked, id=116739, stack(0x00007000173cf000,0x00007000174cf000)]
+  0x00007f83f1dce000 JavaThread "org.apache.openejb.pool.scheduler.151" daemon [_thread_blocked, id=117251, stack(0x00007000172cc000,0x00007000173cc000)]
+  0x00007f83f2b61000 JavaThread "org.apache.openejb.pool.scheduler.150" daemon [_thread_blocked, id=117763, stack(0x00007000171c9000,0x00007000172c9000)]
+  0x00007f83fa8a2000 JavaThread "org.apache.openejb.pool.scheduler.149" daemon [_thread_blocked, id=97027, stack(0x00007000170c6000,0x00007000171c6000)]
+  0x00007f83f2b60000 JavaThread "org.apache.openejb.pool.scheduler.148" daemon [_thread_blocked, id=96515, stack(0x0000700016fc3000,0x00007000170c3000)]
+  0x00007f83fa8a1800 JavaThread "org.apache.openejb.pool.scheduler.147" daemon [_thread_blocked, id=96259, stack(0x0000700016ec0000,0x0000700016fc0000)]
+  0x00007f83fa8a0800 JavaThread "org.apache.openejb.pool.scheduler.146" daemon [_thread_blocked, id=96003, stack(0x0000700016dbd000,0x0000700016ebd000)]
+  0x00007f83f112d000 JavaThread "org.apache.openejb.pool.scheduler.145" daemon [_thread_blocked, id=95491, stack(0x0000700016cba000,0x0000700016dba000)]
+  0x00007f83fa8a0000 JavaThread "org.apache.openejb.pool.scheduler.144" daemon [_thread_blocked, id=118787, stack(0x0000700016bb7000,0x0000700016cb7000)]
+  0x00007f83f1399800 JavaThread "org.apache.openejb.pool.scheduler.143" daemon [_thread_blocked, id=119043, stack(0x0000700016ab4000,0x0000700016bb4000)]
+  0x00007f83fa89f000 JavaThread "org.apache.openejb.pool.scheduler.142" daemon [_thread_blocked, id=94723, stack(0x00007000169b1000,0x0000700016ab1000)]
+  0x00007f83f2b5f800 JavaThread "org.apache.openejb.pool.scheduler.141" daemon [_thread_blocked, id=119555, stack(0x00007000168ae000,0x00007000169ae000)]
+  0x00007f83f1dcd000 JavaThread "org.apache.openejb.pool.scheduler.140" daemon [_thread_blocked, id=119811, stack(0x00007000167ab000,0x00007000168ab000)]
+  0x00007f83f1dcc800 JavaThread "org.apache.openejb.pool.scheduler.139" daemon [_thread_blocked, id=94211, stack(0x00007000166a8000,0x00007000167a8000)]
+  0x00007f83fa89e800 JavaThread "org.apache.openejb.pool.scheduler.138" daemon [_thread_blocked, id=120579, stack(0x00007000165a5000,0x00007000166a5000)]
+  0x00007f83fa89d800 JavaThread "org.apache.openejb.pool.scheduler.137" daemon [_thread_blocked, id=93955, stack(0x00007000164a2000,0x00007000165a2000)]
+  0x00007f83f1398800 JavaThread "org.apache.openejb.pool.scheduler.136" daemon [_thread_blocked, id=121347, stack(0x000070001639f000,0x000070001649f000)]
+  0x00007f83f2b5e800 JavaThread "org.apache.openejb.pool.scheduler.135" daemon [_thread_blocked, id=93699, stack(0x000070001629c000,0x000070001639c000)]
+  0x00007f83f112c000 JavaThread "org.apache.openejb.pool.scheduler.134" daemon [_thread_blocked, id=122115, stack(0x0000700016199000,0x0000700016299000)]
+  0x00007f83f1dcb800 JavaThread "org.apache.openejb.pool.scheduler.133" daemon [_thread_blocked, id=122627, stack(0x0000700016096000,0x0000700016196000)]
+  0x00007f83fa89d000 JavaThread "org.apache.openejb.pool.scheduler.132" daemon [_thread_blocked, id=122883, stack(0x0000700015f93000,0x0000700016093000)]
+  0x00007f83f2b5e000 JavaThread "org.apache.openejb.pool.scheduler.131" daemon [_thread_blocked, id=92931, stack(0x0000700015e90000,0x0000700015f90000)]
+  0x00007f83f112b800 JavaThread "org.apache.openejb.pool.scheduler.130" daemon [_thread_blocked, id=92675, stack(0x0000700015d8d000,0x0000700015e8d000)]
+  0x00007f83f2a3e800 JavaThread "org.apache.openejb.pool.scheduler.129" daemon [_thread_blocked, id=123395, stack(0x0000700015c8a000,0x0000700015d8a000)]
+  0x00007f83fa89c000 JavaThread "org.apache.openejb.pool.scheduler.128" daemon [_thread_blocked, id=92163, stack(0x0000700015b87000,0x0000700015c87000)]
+  0x00007f83f112a800 JavaThread "org.apache.openejb.pool.scheduler.127" daemon [_thread_blocked, id=91907, stack(0x0000700015a84000,0x0000700015b84000)]
+  0x00007f83f2a3d800 JavaThread "org.apache.openejb.pool.scheduler.126" daemon [_thread_blocked, id=91395, stack(0x0000700015981000,0x0000700015a81000)]
+  0x00007f83f1c56800 JavaThread "org.apache.openejb.pool.scheduler.125" daemon [_thread_blocked, id=124419, stack(0x000070001587e000,0x000070001597e000)]
+  0x00007f83fa89b800 JavaThread "org.apache.openejb.pool.scheduler.124" daemon [_thread_blocked, id=90883, stack(0x000070001577b000,0x000070001587b000)]
+  0x00007f83f2a3d000 JavaThread "org.apache.openejb.pool.scheduler.123" daemon [_thread_blocked, id=90627, stack(0x0000700015678000,0x0000700015778000)]
+  0x00007f83f2a3c000 JavaThread "org.apache.openejb.pool.scheduler.122" daemon [_thread_blocked, id=125187, stack(0x0000700015575000,0x0000700015675000)]
+  0x00007f83fa89a800 JavaThread "org.apache.openejb.pool.scheduler.121" daemon [_thread_blocked, id=90371, stack(0x0000700015472000,0x0000700015572000)]
+  0x00007f83f112a000 JavaThread "org.apache.openejb.pool.scheduler.120" daemon [_thread_blocked, id=90115, stack(0x000070001536f000,0x000070001546f000)]
+  0x00007f83f2a3b800 JavaThread "org.apache.openejb.pool.scheduler.119" daemon [_thread_blocked, id=125955, stack(0x000070001526c000,0x000070001536c000)]
+  0x00007f83f1c56000 JavaThread "org.apache.openejb.pool.scheduler.118" daemon [_thread_blocked, id=126211, stack(0x0000700015169000,0x0000700015269000)]
+  0x00007f83fa89a000 JavaThread "org.apache.openejb.pool.scheduler.117" daemon [_thread_blocked, id=126467, stack(0x0000700015066000,0x0000700015166000)]
+  0x00007f83f2a3a800 JavaThread "org.apache.openejb.pool.scheduler.116" daemon [_thread_blocked, id=126723, stack(0x0000700014f63000,0x0000700015063000)]
+  0x00007f83f1129000 JavaThread "org.apache.openejb.pool.scheduler.115" daemon [_thread_blocked, id=127235, stack(0x0000700014e60000,0x0000700014f60000)]
+  0x00007f83f1128800 JavaThread "org.apache.openejb.pool.scheduler.114" daemon [_thread_blocked, id=88835, stack(0x0000700014d5d000,0x0000700014e5d000)]
+  0x00007f83fa899000 JavaThread "org.apache.openejb.pool.scheduler.113" daemon [_thread_blocked, id=128003, stack(0x0000700014c5a000,0x0000700014d5a000)]
+  0x00007f83f2a3a000 JavaThread "org.apache.openejb.pool.scheduler.112" daemon [_thread_blocked, id=128515, stack(0x0000700014b57000,0x0000700014c57000)]
+  0x00007f83f2a39000 JavaThread "org.apache.openejb.pool.scheduler.111" daemon [_thread_blocked, id=129027, stack(0x0000700014a54000,0x0000700014b54000)]
+  0x00007f83f1127800 JavaThread "org.apache.openejb.pool.scheduler.110" daemon [_thread_blocked, id=88323, stack(0x0000700014951000,0x0000700014a51000)]
+  0x00007f83f1127000 JavaThread "org.apache.openejb.pool.scheduler.109" daemon [_thread_blocked, id=88067, stack(0x000070001484e000,0x000070001494e000)]
+  0x00007f83fa898800 JavaThread "org.apache.openejb.pool.scheduler.108" daemon [_thread_blocked, id=129795, stack(0x000070001474b000,0x000070001484b000)]
+  0x00007f83f2a38800 JavaThread "org.apache.openejb.pool.scheduler.107" daemon [_thread_blocked, id=87811, stack(0x0000700014648000,0x0000700014748000)]
+  0x00007f83f1126000 JavaThread "org.apache.openejb.pool.scheduler.106" daemon [_thread_blocked, id=130563, stack(0x0000700014545000,0x0000700014645000)]
+  0x00007f83f2a37800 JavaThread "org.apache.openejb.pool.scheduler.105" daemon [_thread_blocked, id=87555, stack(0x0000700014442000,0x0000700014542000)]
+  0x00007f83fa897800 JavaThread "org.apache.openejb.pool.scheduler.104" daemon [_thread_blocked, id=67075, stack(0x000070001433f000,0x000070001443f000)]
+  0x00007f83f29df000 JavaThread "org.apache.openejb.pool.scheduler.103" daemon [_thread_blocked, id=66819, stack(0x000070001423c000,0x000070001433c000)]
+  0x00007f83f29de800 JavaThread "org.apache.openejb.pool.scheduler.102" daemon [_thread_blocked, id=66563, stack(0x0000700014139000,0x0000700014239000)]
+  0x00007f83fa897000 JavaThread "org.apache.openejb.pool.scheduler.101" daemon [_thread_blocked, id=67843, stack(0x0000700014036000,0x0000700014136000)]
+  0x00007f83f1125800 JavaThread "org.apache.openejb.pool.scheduler.100" daemon [_thread_blocked, id=65795, stack(0x0000700013f33000,0x0000700014033000)]
+  0x00007f83f1124800 JavaThread "org.apache.openejb.pool.scheduler.99" daemon [_thread_blocked, id=68099, stack(0x0000700013e30000,0x0000700013f30000)]
+  0x00007f83f1e6c000 JavaThread "org.apache.openejb.pool.scheduler.98" daemon [_thread_blocked, id=68355, stack(0x0000700013d2d000,0x0000700013e2d000)]
+  0x00007f83f801c000 JavaThread "org.apache.openejb.pool.scheduler.97" daemon [_thread_blocked, id=65027, stack(0x0000700013c2a000,0x0000700013d2a000)]
+  0x00007f83f2b5d000 JavaThread "org.apache.openejb.pool.scheduler.96" daemon [_thread_blocked, id=69123, stack(0x0000700013b27000,0x0000700013c27000)]
+  0x00007f83f1e6b800 JavaThread "org.apache.openejb.pool.scheduler.95" daemon [_thread_blocked, id=69635, stack(0x0000700013a24000,0x0000700013b24000)]
+  0x00007f83f801b800 JavaThread "org.apache.openejb.pool.scheduler.94" daemon [_thread_blocked, id=64771, stack(0x0000700013921000,0x0000700013a21000)]
+  0x00007f83f1ba6800 JavaThread "org.apache.openejb.pool.scheduler.93" daemon [_thread_blocked, id=70147, stack(0x000070001381e000,0x000070001391e000)]
+  0x00007f83f2b5c800 JavaThread "org.apache.openejb.pool.scheduler.92" daemon [_thread_blocked, id=70403, stack(0x000070001371b000,0x000070001381b000)]
+  0x00007f83f2b5b800 JavaThread "org.apache.openejb.pool.scheduler.91" daemon [_thread_blocked, id=70659, stack(0x0000700013618000,0x0000700013718000)]
+  0x00007f83f1ba5800 JavaThread "org.apache.openejb.pool.scheduler.90" daemon [_thread_blocked, id=63491, stack(0x0000700013515000,0x0000700013615000)]
+  0x00007f83f801a800 JavaThread "org.apache.openejb.pool.scheduler.89" daemon [_thread_blocked, id=62979, stack(0x0000700013412000,0x0000700013512000)]
+  0x00007f83f801a000 JavaThread "org.apache.openejb.pool.scheduler.88" daemon [_thread_blocked, id=70915, stack(0x000070001330f000,0x000070001340f000)]
+  0x00007f83fa896000 JavaThread "org.apache.openejb.pool.scheduler.87" daemon [_thread_blocked, id=62211, stack(0x000070001320c000,0x000070001330c000)]
+  0x00007f83fa895800 JavaThread "org.apache.openejb.pool.scheduler.86" daemon [_thread_blocked, id=71427, stack(0x0000700013109000,0x0000700013209000)]
+  0x00007f83f1ea3000 JavaThread "org.apache.openejb.pool.scheduler.85" daemon [_thread_blocked, id=61699, stack(0x0000700013006000,0x0000700013106000)]
+  0x00007f83f8019000 JavaThread "org.apache.openejb.pool.scheduler.84" daemon [_thread_blocked, id=61187, stack(0x0000700012f03000,0x0000700013003000)]
+  0x00007f83f8018800 JavaThread "org.apache.openejb.pool.scheduler.83" daemon [_thread_blocked, id=71683, stack(0x0000700012e00000,0x0000700012f00000)]
+  0x00007f83fa894800 JavaThread "org.apache.openejb.pool.scheduler.82" daemon [_thread_blocked, id=71939, stack(0x0000700012cfd000,0x0000700012dfd000)]
+  0x00007f83fa894000 JavaThread "org.apache.openejb.pool.scheduler.81" daemon [_thread_blocked, id=72195, stack(0x0000700012bfa000,0x0000700012cfa000)]
+  0x00007f83fa893000 JavaThread "org.apache.openejb.pool.scheduler.80" daemon [_thread_blocked, id=72451, stack(0x0000700012af7000,0x0000700012bf7000)]
+  0x00007f83fa892800 JavaThread "org.apache.openejb.pool.scheduler.79" daemon [_thread_blocked, id=59907, stack(0x00007000129f4000,0x0000700012af4000)]
+  0x00007f83f8017800 JavaThread "org.apache.openejb.pool.scheduler.78" daemon [_thread_blocked, id=59651, stack(0x00007000128f1000,0x00007000129f1000)]
+  0x00007f83fa891800 JavaThread "org.apache.openejb.pool.scheduler.77" daemon [_thread_blocked, id=73475, stack(0x00007000127ee000,0x00007000128ee000)]
+  0x00007f83f8017000 JavaThread "org.apache.openejb.pool.scheduler.76" daemon [_thread_blocked, id=73731, stack(0x00007000126eb000,0x00007000127eb000)]
+  0x00007f83faadb000 JavaThread "org.apache.openejb.pool.scheduler.75" daemon [_thread_blocked, id=58883, stack(0x00007000125e8000,0x00007000126e8000)]
+  0x00007f83faada800 JavaThread "org.apache.openejb.pool.scheduler.74" daemon [_thread_blocked, id=58371, stack(0x00007000124e5000,0x00007000125e5000)]
+  0x00007f83f2b5b000 JavaThread "org.apache.openejb.pool.scheduler.73" daemon [_thread_blocked, id=74243, stack(0x00007000123e2000,0x00007000124e2000)]
+  0x00007f83f8016000 JavaThread "org.apache.openejb.pool.scheduler.72" daemon [_thread_blocked, id=58115, stack(0x00007000122df000,0x00007000123df000)]
+  0x00007f83f8015800 JavaThread "org.apache.openejb.pool.scheduler.71" daemon [_thread_blocked, id=57603, stack(0x00007000121dc000,0x00007000122dc000)]
+  0x00007f83faad9800 JavaThread "org.apache.openejb.pool.scheduler.70" daemon [_thread_blocked, id=74755, stack(0x00007000120d9000,0x00007000121d9000)]
+  0x00007f83f2b5a000 JavaThread "org.apache.openejb.pool.scheduler.69" daemon [_thread_blocked, id=75267, stack(0x0000700011fd6000,0x00007000120d6000)]
+  0x00007f83f8014800 JavaThread "org.apache.openejb.pool.scheduler.68" daemon [_thread_blocked, id=56835, stack(0x0000700011ed3000,0x0000700011fd3000)]
+  0x00007f83faad9000 JavaThread "org.apache.openejb.pool.scheduler.67" daemon [_thread_blocked, id=56323, stack(0x0000700011dd0000,0x0000700011ed0000)]
+  0x00007f83f1ea2800 JavaThread "org.apache.openejb.pool.scheduler.66" daemon [_thread_blocked, id=55811, stack(0x0000700011ccd000,0x0000700011dcd000)]
+  0x00007f83f1d19800 JavaThread "org.apache.openejb.pool.scheduler.65" daemon [_thread_blocked, id=55299, stack(0x0000700011bca000,0x0000700011cca000)]
+  0x00007f83f2b59800 JavaThread "org.apache.openejb.pool.scheduler.64" daemon [_thread_blocked, id=75523, stack(0x0000700011ac7000,0x0000700011bc7000)]
+  0x00007f83f8014000 JavaThread "org.apache.openejb.pool.scheduler.63" daemon [_thread_blocked, id=54787, stack(0x00007000119c4000,0x0000700011ac4000)]
+  0x00007f83f29e4000 JavaThread "org.apache.openejb.pool.scheduler.62" daemon [_thread_blocked, id=54531, stack(0x00007000118c1000,0x00007000119c1000)]
+  0x00007f83faad8000 JavaThread "org.apache.openejb.pool.scheduler.61" daemon [_thread_blocked, id=76291, stack(0x00007000117be000,0x00007000118be000)]
+  0x00007f83f1d19000 JavaThread "org.apache.openejb.pool.scheduler.60" daemon [_thread_blocked, id=54019, stack(0x00007000116bb000,0x00007000117bb000)]
+  0x00007f83f8013000 JavaThread "org.apache.openejb.pool.scheduler.59" daemon [_thread_blocked, id=76803, stack(0x00007000115b8000,0x00007000116b8000)]
+  0x00007f83f29e3000 JavaThread "org.apache.openejb.pool.scheduler.58" daemon [_thread_blocked, id=53507, stack(0x00007000114b5000,0x00007000115b5000)]
+  0x00007f83f29e2800 JavaThread "org.apache.openejb.pool.scheduler.57" daemon [_thread_blocked, id=52995, stack(0x00007000113b2000,0x00007000114b2000)]
+  0x00007f83f8012800 JavaThread "org.apache.openejb.pool.scheduler.56" daemon [_thread_blocked, id=77571, stack(0x00007000112af000,0x00007000113af000)]
+  0x00007f83faad7800 JavaThread "org.apache.openejb.pool.scheduler.55" daemon [_thread_blocked, id=78083, stack(0x00007000111ac000,0x00007000112ac000)]
+  0x00007f83faad6800 JavaThread "org.apache.openejb.pool.scheduler.54" daemon [_thread_blocked, id=78595, stack(0x00007000110a9000,0x00007000111a9000)]
+  0x00007f83f29e1800 JavaThread "org.apache.openejb.pool.scheduler.53" daemon [_thread_blocked, id=52483, stack(0x0000700010fa6000,0x00007000110a6000)]
+  0x00007f83f29e1000 JavaThread "org.apache.openejb.pool.scheduler.52" daemon [_thread_blocked, id=79107, stack(0x0000700010ea3000,0x0000700010fa3000)]
+  0x00007f83f8011800 JavaThread "org.apache.openejb.pool.scheduler.51" daemon [_thread_blocked, id=79619, stack(0x0000700010da0000,0x0000700010ea0000)]
+  0x00007f83f29e0000 JavaThread "org.apache.openejb.pool.scheduler.50" daemon [_thread_blocked, id=52227, stack(0x0000700010c9d000,0x0000700010d9d000)]
+  0x00007f83faad6000 JavaThread "org.apache.openejb.pool.scheduler.49" daemon [_thread_blocked, id=51715, stack(0x0000700010b9a000,0x0000700010c9a000)]
+  0x00007f83f8011000 JavaThread "org.apache.openejb.pool.scheduler.48" daemon [_thread_blocked, id=51203, stack(0x0000700010a97000,0x0000700010b97000)]
+  0x00007f83f8010000 JavaThread "org.apache.openejb.pool.scheduler.47" daemon [_thread_blocked, id=50947, stack(0x0000700010994000,0x0000700010a94000)]
+  0x00007f83f8fbc800 JavaThread "org.apache.openejb.pool.scheduler.46" daemon [_thread_blocked, id=80387, stack(0x0000700010891000,0x0000700010991000)]
+  0x00007f83f110f800 JavaThread "org.apache.openejb.pool.scheduler.45" daemon [_thread_blocked, id=80643, stack(0x000070001078e000,0x000070001088e000)]
+  0x00007f83f1de8800 JavaThread "org.apache.openejb.pool.scheduler.44" daemon [_thread_blocked, id=81155, stack(0x000070001068b000,0x000070001078b000)]
+  0x00007f83faad5000 JavaThread "org.apache.openejb.pool.scheduler.43" daemon [_thread_blocked, id=50179, stack(0x0000700010588000,0x0000700010688000)]
+  0x00007f83f8fbb800 JavaThread "org.apache.openejb.pool.scheduler.42" daemon [_thread_blocked, id=81667, stack(0x0000700010485000,0x0000700010585000)]
+  0x00007f83f110e800 JavaThread "org.apache.openejb.pool.scheduler.41" daemon [_thread_blocked, id=49411, stack(0x0000700010382000,0x0000700010482000)]
+  0x00007f83faad4800 JavaThread "org.apache.openejb.pool.scheduler.40" daemon [_thread_blocked, id=48899, stack(0x000070001027f000,0x000070001037f000)]
+  0x00007f83fac49000 JavaThread "org.apache.openejb.pool.scheduler.39" daemon [_thread_blocked, id=48387, stack(0x000070001017c000,0x000070001027c000)]
+  0x00007f83f1bfb800 JavaThread "org.apache.openejb.pool.scheduler.38" daemon [_thread_blocked, id=82179, stack(0x0000700010079000,0x0000700010179000)]
+  0x00007f83f1188800 JavaThread "org.apache.openejb.pool.scheduler.37" daemon [_thread_blocked, id=82435, stack(0x000070000ff76000,0x0000700010076000)]
+  0x00007f83f29d7800 JavaThread "org.apache.openejb.pool.scheduler.36" daemon [_thread_blocked, id=82691, stack(0x000070000fe73000,0x000070000ff73000)]
+  0x00007f83f1bfe800 JavaThread "org.apache.openejb.pool.scheduler.35" daemon [_thread_blocked, id=47619, stack(0x000070000fd70000,0x000070000fe70000)]
+  0x00007f83fac48800 JavaThread "org.apache.openejb.pool.scheduler.34" daemon [_thread_blocked, id=47363, stack(0x000070000fc6d000,0x000070000fd6d000)]
+  0x00007f83f29d6800 JavaThread "org.apache.openejb.pool.scheduler.33" daemon [_thread_blocked, id=46851, stack(0x000070000fb6a000,0x000070000fc6a000)]
+  0x00007f83f802b000 JavaThread "org.apache.openejb.pool.scheduler.32" daemon [_thread_blocked, id=83715, stack(0x000070000fa67000,0x000070000fb67000)]
+  0x00007f83f2855800 JavaThread "org.apache.openejb.pool.scheduler.31" daemon [_thread_blocked, id=84227, stack(0x000070000f964000,0x000070000fa64000)]
+  0x00007f83f2a5f000 JavaThread "org.apache.openejb.pool.scheduler.30" daemon [_thread_blocked, id=46595, stack(0x000070000f861000,0x000070000f961000)]
+  0x00007f83f1de5800 JavaThread "org.apache.openejb.pool.scheduler.29" daemon [_thread_blocked, id=46339, stack(0x000070000f75e000,0x000070000f85e000)]
+  0x00007f83fac45000 JavaThread "org.apache.openejb.pool.scheduler.28" daemon [_thread_blocked, id=84995, stack(0x000070000f65b000,0x000070000f75b000)]
+  0x00007f83fac44800 JavaThread "org.apache.openejb.pool.scheduler.27" daemon [_thread_blocked, id=45571, stack(0x000070000f558000,0x000070000f658000)]
+  0x00007f83f802a000 JavaThread "OpenEJB-TimerService-Scheduler_QuartzSchedulerThread" daemon [_thread_blocked, id=45059, stack(0x000070000f455000,0x000070000f555000)]
+  0x00007f83f800c000 JavaThread "org.apache.openejb.pool.scheduler.26" daemon [_thread_blocked, id=44803, stack(0x000070000f352000,0x000070000f452000)]
+  0x00007f83f1862000 JavaThread "org.apache.openejb.pool.scheduler.25" daemon [_thread_blocked, id=44547, stack(0x000070000f24f000,0x000070000f34f000)]
+  0x00007f83fac47800 JavaThread "org.apache.openejb.pool.scheduler.24" daemon [_thread_blocked, id=44291, stack(0x000070000f14c000,0x000070000f24c000)]
+  0x00007f83f8e12800 JavaThread "org.apache.openejb.pool.scheduler.23" daemon [_thread_blocked, id=36359, stack(0x000070000f049000,0x000070000f149000)]
+  0x00007f83f1867000 JavaThread "org.apache.openejb.pool.scheduler.22" daemon [_thread_blocked, id=31495, stack(0x000070000ef46000,0x000070000f046000)]
+  0x00007f83fac47000 JavaThread "org.apache.openejb.pool.scheduler.21" daemon [_thread_blocked, id=35591, stack(0x000070000ee43000,0x000070000ef43000)]
+  0x00007f83fac46000 JavaThread "org.apache.openejb.pool.scheduler.20" daemon [_thread_blocked, id=40207, stack(0x000070000ed40000,0x000070000ee40000)]
+  0x00007f83faaf1800 JavaThread "org.apache.openejb.pool.scheduler.19" daemon [_thread_blocked, id=33287, stack(0x000070000ec3d000,0x000070000ed3d000)]
+  0x00007f83faaf0800 JavaThread "org.apache.openejb.pool.scheduler.18" daemon [_thread_blocked, id=30219, stack(0x000070000eb3a000,0x000070000ec3a000)]
+  0x00007f83fac4d000 JavaThread "org.apache.openejb.pool.scheduler.17" daemon [_thread_blocked, id=32519, stack(0x000070000ea37000,0x000070000eb37000)]
+  0x00007f83f11a5000 JavaThread "org.apache.openejb.pool.scheduler.16" daemon [_thread_blocked, id=34055, stack(0x000070000e934000,0x000070000ea34000)]
+  0x00007f83f118b800 JavaThread "org.apache.openejb.pool.scheduler.15" daemon [_thread_blocked, id=34567, stack(0x000070000e831000,0x000070000e931000)]
+  0x00007f83f2cbb000 JavaThread "org.apache.openejb.pool.scheduler.14" daemon [_thread_blocked, id=86791, stack(0x000070000e72e000,0x000070000e82e000)]
+  0x00007f83f8a85000 JavaThread "org.apache.openejb.pool.scheduler.13" daemon [_thread_blocked, id=33799, stack(0x000070000e62b000,0x000070000e72b000)]
+  0x00007f83f1419000 JavaThread "org.apache.openejb.pool.scheduler.12" daemon [_thread_blocked, id=33543, stack(0x000070000e528000,0x000070000e628000)]
+  0x00007f83f1073800 JavaThread "org.apache.openejb.pool.scheduler.11" daemon [_thread_blocked, id=34823, stack(0x000070000e425000,0x000070000e525000)]
+  0x00007f83f11f4000 JavaThread "org.apache.openejb.pool.scheduler.10" daemon [_thread_blocked, id=33031, stack(0x000070000e322000,0x000070000e422000)]
+  0x00007f83f2a90800 JavaThread "org.apache.openejb.pool.scheduler.9" daemon [_thread_blocked, id=44039, stack(0x000070000e21f000,0x000070000e31f000)]
+  0x00007f83f2b0d000 JavaThread "org.apache.openejb.pool.scheduler.8" daemon [_thread_blocked, id=37387, stack(0x000070000e11c000,0x000070000e21c000)]
+  0x00007f83f2b0a800 JavaThread "org.apache.openejb.pool.scheduler.7" daemon [_thread_blocked, id=86279, stack(0x000070000e019000,0x000070000e119000)]
+  0x00007f83f11a0800 JavaThread "org.apache.openejb.pool.scheduler.6" daemon [_thread_blocked, id=30739, stack(0x000070000df16000,0x000070000e016000)]
+  0x00007f83fac4c800 JavaThread "org.apache.openejb.pool.scheduler.5" daemon [_thread_blocked, id=41479, stack(0x000070000d1ef000,0x000070000d2ef000)]
+  0x00007f83f8027800 JavaThread "org.apache.openejb.pool.scheduler.4" daemon [_thread_blocked, id=4367, stack(0x000070000c7d1000,0x000070000c8d1000)]
+  0x00007f83f70ea000 JavaThread "Abandoned connection cleanup thread" daemon [_thread_blocked, id=41223, stack(0x000070000c8d4000,0x000070000c9d4000)]
+=>0x00007f83f28a8800 JavaThread "http-bio-8080-exec-5" daemon [_thread_in_vm, id=29195, stack(0x000070000de13000,0x000070000df13000)]
+  0x00007f83f57f7000 JavaThread "http-bio-8080-exec-4" daemon [_thread_blocked, id=30471, stack(0x000070000dd10000,0x000070000de10000)]
+  0x00007f83f14c1800 JavaThread "http-bio-8080-exec-3" daemon [_thread_blocked, id=39435, stack(0x000070000dc0d000,0x000070000dd0d000)]
+  0x00007f83f4c47000 JavaThread "http-bio-8080-exec-2" daemon [_thread_blocked, id=28683, stack(0x000070000db0a000,0x000070000dc0a000)]
+  0x00007f83f1dc6800 JavaThread "http-bio-8080-exec-1" daemon [_thread_blocked, id=38163, stack(0x000070000da07000,0x000070000db07000)]
+  0x00007f83f7880000 JavaThread "ajp-bio-8009-AsyncTimeout" daemon [_thread_blocked, id=38923, stack(0x000070000d904000,0x000070000da04000)]
+  0x00007f83f3a3f000 JavaThread "ajp-bio-8009-Acceptor-0" daemon [_thread_in_native, id=39179, stack(0x000070000d801000,0x000070000d901000)]
+  0x00007f83f4a49000 JavaThread "http-bio-4443-AsyncTimeout" daemon [_thread_blocked, id=39947, stack(0x000070000d6fe000,0x000070000d7fe000)]
+  0x00007f83f1d08000 JavaThread "http-bio-4443-Acceptor-0" daemon [_thread_in_native, id=24587, stack(0x000070000d5fb000,0x000070000d6fb000)]
+  0x00007f83f2ca6800 JavaThread "http-bio-8080-AsyncTimeout" daemon [_thread_blocked, id=25099, stack(0x000070000d4f8000,0x000070000d5f8000)]
+  0x00007f83f47f7000 JavaThread "http-bio-8080-Acceptor-0" daemon [_thread_in_native, id=39691, stack(0x000070000d3f5000,0x000070000d4f5000)]
+  0x00007f83f1e0d000 JavaThread "ContainerBackgroundProcessor[StandardEngine[Catalina]]" daemon [_thread_blocked, id=28167, stack(0x000070000d2f2000,0x000070000d3f2000)]
+  0x00007f83f1d07800 JavaThread "org.apache.openejb.pool.scheduler.3" daemon [_thread_blocked, id=36615, stack(0x000070000d0ec000,0x000070000d1ec000)]
+  0x00007f83f0be5000 JavaThread "org.apache.openejb.pool.scheduler.2" daemon [_thread_blocked, id=36871, stack(0x000070000cfe9000,0x000070000d0e9000)]
+  0x00007f83f4308800 JavaThread "org.apache.openejb.pool.scheduler.1" daemon [_thread_blocked, id=26635, stack(0x000070000cee6000,0x000070000cfe6000)]
+  0x00007f83f0bb1800 JavaThread "Abandoned connection cleanup thread" daemon [_thread_blocked, id=26887, stack(0x000070000cde3000,0x000070000cee3000)]
+  0x00007f83f435d800 JavaThread "AbstractSecurityService.Timer" daemon [_thread_blocked, id=29707, stack(0x000070000cce0000,0x000070000cde0000)]
+  0x00007f83f13d0000 JavaThread "RetryTimer" daemon [_thread_blocked, id=28939, stack(0x000070000cbdd000,0x000070000ccdd000)]
+  0x00007f83f2a6e000 JavaThread "GC Daemon" daemon [_thread_blocked, id=40711, stack(0x000070000cada000,0x000070000cbda000)]
+  0x00007f83f13a5000 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=23299, stack(0x000070000c9d7000,0x000070000cad7000)]
+  0x00007f83f08a7000 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=22275, stack(0x000070000c5cb000,0x000070000c6cb000)]
+  0x00007f83f2864800 JavaThread "RMI TCP Accept-1099" daemon [_thread_in_native, id=42243, stack(0x000070000c4c8000,0x000070000c5c8000)]
+  0x00007f83f08a2800 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=42499, stack(0x000070000c3c5000,0x000070000c4c5000)]
+  0x00007f83f3023800 JavaThread "Service Thread" daemon [_thread_blocked, id=43011, stack(0x000070000c2c2000,0x000070000c3c2000)]
+  0x00007f83f4010800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=21763, stack(0x000070000c1bf000,0x000070000c2bf000)]
+  0x00007f83f300a800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=15619, stack(0x000070000c0bc000,0x000070000c1bc000)]
+  0x00007f83f181d800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=15107, stack(0x000070000bfb9000,0x000070000c0b9000)]
+  0x00007f83f4010000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16387, stack(0x000070000beb6000,0x000070000bfb6000)]
+  0x00007f83f1072000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=16643, stack(0x000070000bdb3000,0x000070000beb3000)]
+  0x00007f83f1802000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=17155, stack(0x000070000bcb0000,0x000070000bdb0000)]
+  0x00007f83f0826800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=14343, stack(0x000070000bbad000,0x000070000bcad000)]
+  0x00007f83f3011800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=17411, stack(0x000070000baaa000,0x000070000bbaa000)]
+  0x00007f83f2820800 JavaThread "Finalizer" daemon [_thread_blocked, id=19203, stack(0x000070000b9a7000,0x000070000baa7000)]
+  0x00007f83f2820000 JavaThread "Reference Handler" daemon [_thread_blocked, id=12803, stack(0x000070000b8a4000,0x000070000b9a4000)]
+  0x00007f83f1003800 JavaThread "main" [_thread_in_native, id=9731, stack(0x000070000ae86000,0x000070000af86000)]
+
+Other Threads:
+  0x00007f83f281f800 VMThread [stack: 0x000070000b7a1000,0x000070000b8a1000] [id=12547]
+  0x00007f83f1820800 WatcherThread [stack: 0x000070000c6ce000,0x000070000c7ce000] [id=22787]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 873472K, used 274002K [0x000000076ab00000, 0x00000007a7900000, 0x00000007c0000000)
+  eden space 771072K, 24% used [0x000000076ab00000,0x00000007761b22f8,0x0000000799c00000)
+  from space 102400K, 84% used [0x00000007a0e00000,0x00000007a62e2618,0x00000007a7200000)
+  to   space 113152K, 0% used [0x0000000799c00000,0x0000000799c00000,0x00000007a0a80000)
+ ParOldGen       total 479232K, used 218975K [0x00000006c0000000, 0x00000006dd400000, 0x000000076ab00000)
+  object space 479232K, 45% used [0x00000006c0000000,0x00000006cd5d7f58,0x00000006dd400000)
+ Metaspace       used 79311K, capacity 80282K, committed 80384K, reserved 1120256K
+  class space    used 9912K, capacity 10204K, committed 10240K, reserved 1048576K
+
+Card table byte_map: [0x000000011ffeb000,0x00000001207ec000] byte_map_base: 0x000000011c9eb000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000110940e20
+ Begin Bits: [0x00000001207ec000, 0x00000001247ec000)
+ End Bits:   [0x00000001247ec000, 0x00000001287ec000)
+
+Polling page: 0x000000010e263000
+
+CodeCache: size=245760Kb used=14711Kb max_used=14750Kb free=231048Kb
+ bounds [0x0000000110feb000, 0x0000000111e6b000, 0x000000011ffeb000]
+ total_blobs=4376 nmethods=3876 adapters=421
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 17.903 Thread 0x00007f83f300a800 4684       4       java.lang.reflect.Field::getAnnotation (23 bytes)
+Event: 17.903 Thread 0x00007f83f4010000 4685       4       java.lang.reflect.AccessibleObject::isAnnotationPresent (6 bytes)
+Event: 17.905 Thread 0x00007f83f4010800 4686       3       java.lang.reflect.Field::hashCode (19 bytes)
+Event: 17.905 Thread 0x00007f83f4010800 nmethod 4686 0x0000000111900710 code [0x00000001119008a0, 0x0000000111900e28]
+Event: 17.905 Thread 0x00007f83f4010800 4687       3       java.lang.reflect.Field::equals (57 bytes)
+Event: 17.905 Thread 0x00007f83f4010800 nmethod 4687 0x00000001118ffc90 code [0x00000001118ffe20, 0x0000000111900630]
+Event: 17.906 Thread 0x00007f83f181d800 4688       4       java.lang.reflect.Field::copy (76 bytes)
+Event: 17.908 Thread 0x00007f83f181d800 nmethod 4688 0x00000001118fcb50 code [0x00000001118fcca0, 0x00000001118fce18]
+Event: 17.913 Thread 0x00007f83f300a800 nmethod 4684 0x00000001118fdb10 code [0x00000001118fdcc0, 0x00000001118fe2d8]
+Event: 17.913 Thread 0x00007f83f4010000 nmethod 4685 0x00000001118f9e50 code [0x00000001118fa000, 0x00000001118fa6f8]
+
+GC Heap History (10 events):
+Event: 107.591 GC heap before
+{Heap before GC invocations=16 (full 3):
+ PSYoungGen      total 615936K, used 574401K [0x000000076ab00000, 0x0000000796b00000, 0x00000007c0000000)
+  eden space 553984K, 100% used [0x000000076ab00000,0x000000078c800000,0x000000078c800000)
+  from space 61952K, 32% used [0x0000000792e80000,0x0000000794270740,0x0000000796b00000)
+  to   space 83456K, 0% used [0x000000078c800000,0x000000078c800000,0x0000000791980000)
+ ParOldGen       total 431104K, used 202161K [0x00000006c0000000, 0x00000006da500000, 0x000000076ab00000)
+  object space 431104K, 46% used [0x00000006c0000000,0x00000006cc56c438,0x00000006da500000)
+ Metaspace       used 51045K, capacity 51768K, committed 52224K, reserved 1095680K
+  class space    used 6365K, capacity 6577K, committed 6656K, reserved 1048576K
+Event: 107.613 GC heap after
+Heap after GC invocations=16 (full 3):
+ PSYoungGen      total 637440K, used 30399K [0x000000076ab00000, 0x000000079dd80000, 0x00000007c0000000)
+  eden space 553984K, 0% used [0x000000076ab00000,0x000000076ab00000,0x000000078c800000)
+  from space 83456K, 36% used [0x000000078c800000,0x000000078e5afcd8,0x0000000791980000)
+  to   space 78848K, 0% used [0x0000000799080000,0x0000000799080000,0x000000079dd80000)
+ ParOldGen       total 431104K, used 202161K [0x00000006c0000000, 0x00000006da500000, 0x000000076ab00000)
+  object space 431104K, 46% used [0x00000006c0000000,0x00000006cc56c438,0x00000006da500000)
+ Metaspace       used 51045K, capacity 51768K, committed 52224K, reserved 1095680K
+  class space    used 6365K, capacity 6577K, committed 6656K, reserved 1048576K
+}
+Event: 171.620 GC heap before
+{Heap before GC invocations=17 (full 3):
+ PSYoungGen      total 637440K, used 426507K [0x000000076ab00000, 0x000000079dd80000, 0x00000007c0000000)
+  eden space 553984K, 71% used [0x000000076ab00000,0x0000000782dd2ff0,0x000000078c800000)
+  from space 83456K, 36% used [0x000000078c800000,0x000000078e5afcd8,0x0000000791980000)
+  to   space 78848K, 0% used [0x0000000799080000,0x0000000799080000,0x000000079dd80000)
+ ParOldGen       total 431104K, used 202161K [0x00000006c0000000, 0x00000006da500000, 0x000000076ab00000)
+  object space 431104K, 46% used [0x00000006c0000000,0x00000006cc56c438,0x00000006da500000)
+ Metaspace       used 58466K, capacity 59256K, committed 59520K, reserved 1101824K
+  class space    used 7231K, capacity 7473K, committed 7552K, reserved 1048576K
+Event: 171.654 GC heap after
+Heap after GC invocations=17 (full 3):
+ PSYoungGen      total 724480K, used 54401K [0x000000076ab00000, 0x000000079d000000, 0x00000007c0000000)
+  eden space 659456K, 0% used [0x000000076ab00000,0x000000076ab00000,0x0000000792f00000)
+  from space 65024K, 83% used [0x0000000799080000,0x000000079c5a0660,0x000000079d000000)
+  to   space 82432K, 0% used [0x0000000792f00000,0x0000000792f00000,0x0000000797f80000)
+ ParOldGen       total 431104K, used 202161K [0x00000006c0000000, 0x00000006da500000, 0x000000076ab00000)
+  object space 431104K, 46% used [0x00000006c0000000,0x00000006cc56c438,0x00000006da500000)
+ Metaspace       used 58466K, capacity 59256K, committed 59520K, reserved 1101824K
+  class space    used 7231K, capacity 7473K, committed 7552K, reserved 1048576K
+}
+Event: 171.654 GC heap before
+{Heap before GC invocations=18 (full 4):
+ PSYoungGen      total 724480K, used 54401K [0x000000076ab00000, 0x000000079d000000, 0x00000007c0000000)
+  eden space 659456K, 0% used [0x000000076ab00000,0x000000076ab00000,0x0000000792f00000)
+  from space 65024K, 83% used [0x0000000799080000,0x000000079c5a0660,0x000000079d000000)
+  to   space 82432K, 0% used [0x0000000792f00000,0x0000000792f00000,0x0000000797f80000)
+ ParOldGen       total 431104K, used 202161K [0x00000006c0000000, 0x00000006da500000, 0x000000076ab00000)
+  object space 431104K, 46% used [0x00000006c0000000,0x00000006cc56c438,0x00000006da500000)
+ Metaspace       used 58466K, capacity 59256K, committed 59520K, reserved 1101824K
+  class space    used 7231K, capacity 7473K, committed 7552K, reserved 1048576K
+Event: 171.875 GC heap after
+Heap after GC invocations=18 (full 4):
+ PSYoungGen      total 724480K, used 0K [0x000000076ab00000, 0x000000079d000000, 0x00000007c0000000)
+  eden space 659456K, 0% used [0x000000076ab00000,0x000000076ab00000,0x0000000792f00000)
+  from space 65024K, 0% used [0x0000000799080000,0x0000000799080000,0x000000079d000000)
+  to   space 82432K, 0% used [0x0000000792f00000,0x0000000792f00000,0x0000000797f80000)
+ ParOldGen       total 479232K, used 199515K [0x00000006c0000000, 0x00000006dd400000, 0x000000076ab00000)
+  object space 479232K, 41% used [0x00000006c0000000,0x00000006cc2d6fa8,0x00000006dd400000)
+ Metaspace       used 58466K, capacity 59256K, committed 59520K, reserved 1101824K
+  class space    used 7231K, capacity 7473K, committed 7552K, reserved 1048576K
+}
+Event: 230.059 GC heap before
+{Heap before GC invocations=19 (full 4):
+ PSYoungGen      total 724480K, used 659456K [0x000000076ab00000, 0x000000079d000000, 0x00000007c0000000)
+  eden space 659456K, 100% used [0x000000076ab00000,0x0000000792f00000,0x0000000792f00000)
+  from space 65024K, 0% used [0x0000000799080000,0x0000000799080000,0x000000079d000000)
+  to   space 82432K, 0% used [0x0000000792f00000,0x0000000792f00000,0x0000000797f80000)
+ ParOldGen       total 479232K, used 199515K [0x00000006c0000000, 0x00000006dd400000, 0x000000076ab00000)
+  object space 479232K, 41% used [0x00000006c0000000,0x00000006cc2d6fa8,0x00000006dd400000)
+ Metaspace       used 72509K, capacity 73372K, committed 73600K, reserved 1114112K
+  class space    used 8988K, capacity 9223K, committed 9344K, reserved 1048576K
+Event: 230.138 GC heap after
+Heap after GC invocations=19 (full 4):
+ PSYoungGen      total 741888K, used 82407K [0x000000076ab00000, 0x00000007a7200000, 0x00000007c0000000)
+  eden space 659456K, 0% used [0x000000076ab00000,0x000000076ab00000,0x0000000792f00000)
+  from space 82432K, 99% used [0x0000000792f00000,0x0000000797f79c60,0x0000000797f80000)
+  to   space 102400K, 0% used [0x00000007a0e00000,0x00000007a0e00000,0x00000007a7200000)
+ ParOldGen       total 479232K, used 218975K [0x00000006c0000000, 0x00000006dd400000, 0x000000076ab00000)
+  object space 479232K, 45% used [0x00000006c0000000,0x00000006cd5d7f58,0x00000006dd400000)
+ Metaspace       used 72509K, capacity 73372K, committed 73600K, reserved 1114112K
+  class space    used 8988K, capacity 9223K, committed 9344K, reserved 1048576K
+}
+Event: 239.799 GC heap before
+{Heap before GC invocations=20 (full 4):
+ PSYoungGen      total 741888K, used 741863K [0x000000076ab00000, 0x00000007a7200000, 0x00000007c0000000)
+  eden space 659456K, 100% used [0x000000076ab00000,0x0000000792f00000,0x0000000792f00000)
+  from space 82432K, 99% used [0x0000000792f00000,0x0000000797f79c60,0x0000000797f80000)
+  to   space 102400K, 0% used [0x00000007a0e00000,0x00000007a0e00000,0x00000007a7200000)
+ ParOldGen       total 479232K, used 218975K [0x00000006c0000000, 0x00000006dd400000, 0x000000076ab00000)
+  object space 479232K, 45% used [0x00000006c0000000,0x00000006cd5d7f58,0x00000006dd400000)
+ Metaspace       used 73205K, capacity 74146K, committed 74368K, reserved 1114112K
+  class space    used 9060K, capacity 9288K, committed 9344K, reserved 1048576K
+Event: 239.857 GC heap after
+Heap after GC invocations=20 (full 4):
+ PSYoungGen      total 873472K, used 86921K [0x000000076ab00000, 0x00000007a7900000, 0x00000007c0000000)
+  eden space 771072K, 0% used [0x000000076ab00000,0x000000076ab00000,0x0000000799c00000)
+  from space 102400K, 84% used [0x00000007a0e00000,0x00000007a62e2618,0x00000007a7200000)
+  to   space 113152K, 0% used [0x0000000799c00000,0x0000000799c00000,0x00000007a0a80000)
+ ParOldGen       total 479232K, used 218975K [0x00000006c0000000, 0x00000006dd400000, 0x000000076ab00000)
+  object space 479232K, 45% used [0x00000006c0000000,0x00000006cd5d7f58,0x00000006dd400000)
+ Metaspace       used 73205K, capacity 74146K, committed 74368K, reserved 1114112K
+  class space    used 9060K, capacity 9288K, committed 9344K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 16.730 Thread 0x00007f83f28a8800 Uncommon trap: reason=null_check action=maybe_recompile pc=0x0000000111a71ed4 method=java.net.URL.<init>(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V @ 50
+Event: 16.858 Thread 0x00007f83f28a8800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000111d34918 method=java.lang.Integer.valueOf(I)Ljava/lang/Integer; @ 3
+Event: 16.882 Thread 0x00007f83f28a8800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x0000000111d42164 method=com.sun.xml.bind.v2.model.nav.TypeVisitor.visit(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/Object; @ 31
+Event: 16.883 Thread 0x00007f83f28a8800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x0000000111d42164 method=com.sun.xml.bind.v2.model.nav.TypeVisitor.visit(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/Object; @ 31
+Event: 16.883 Thread 0x00007f83f28a8800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x0000000111d42164 method=com.sun.xml.bind.v2.model.nav.TypeVisitor.visit(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/Object; @ 31
+Event: 16.883 Thread 0x00007f83f28a8800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x0000000111d42164 method=com.sun.xml.bind.v2.model.nav.TypeVisitor.visit(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/Object; @ 31
+Event: 17.008 Thread 0x00007f83f28a8800 Uncommon trap: reason=null_check action=maybe_recompile pc=0x0000000111a71ed4 method=java.net.URL.<init>(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V @ 50
+Event: 17.008 Thread 0x00007f83f28a8800 Uncommon trap: reason=null_check action=maybe_recompile pc=0x0000000111a71ed4 method=java.net.URL.<init>(Ljava/net/URL;Ljava/lang/String;Ljava/net/URLStreamHandler;)V @ 50
+Event: 17.237 Thread 0x00007f83f28a8800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000111d656bc method=java.lang.ClassLoader.getPackage(Ljava/lang/String;)Ljava/lang/Package; @ 60
+Event: 17.878 Thread 0x00007f83f28a8800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000001114fe788 method=java.lang.String.lastIndexOf([CII[CIII)I @ 118
+
+Internal exceptions (10 events):
+Event: 234.514 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 38> (0x000000076e7dac18) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.515 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 151> (0x000000076e7dcf60) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.515 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 37> (0x000000076e7deef8) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.517 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 101> (0x000000076e7e7ac0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.517 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 55> (0x000000076e7e9848) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.518 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 59> (0x000000076e7eb420) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.518 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 111> (0x000000076e7ed800) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.520 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 70> (0x000000076e7f3fb0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 234.521 Thread 0x00007f83f28a8800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 135> (0x000000076e7f6eb0) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 267.274 Thread 0x00007f83f28a8800 Exception <a 'java/io/FileNotFoundException'> (0x000000077583ba60) thrown at [/Users/java_re/workspace/8-2-build-macosx-x86_64/jdk8u65/4987/hotspot/src/share/vm/prims/jni.cpp, line 709]
+
+Events (10 events):
+Event: 267.309 loading class org/eclipse/persistence/internal/helper/BasicTypeHelperImpl
+Event: 267.309 loading class org/eclipse/persistence/internal/helper/BasicTypeHelperImpl done
+Event: 267.315 loading class org/eclipse/persistence/internal/sessions/UnitOfWorkChangeSet
+Event: 267.315 loading class org/eclipse/persistence/internal/sessions/UnitOfWorkChangeSet done
+Event: 267.319 loading class org/eclipse/persistence/internal/helper/CustomObjectInputStream
+Event: 267.319 loading class org/eclipse/persistence/internal/helper/CustomObjectInputStream done
+Event: 267.323 loading class java/util/IdentityHashMap$KeyIterator
+Event: 267.323 loading class java/util/IdentityHashMap$KeyIterator done
+Event: 267.331 loading class org/apache/openejb/core/ivm/naming/java/javaURLContextFactory
+Event: 267.331 loading class org/apache/openejb/core/ivm/naming/java/javaURLContextFactory done
+
+
+Dynamic libraries:
+0x000000001ab5f000 	/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
+0x000000001ab5f000 	/System/Library/Frameworks/Security.framework/Versions/A/Security
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+0x000000001ab5f000 	/usr/lib/libz.1.dylib
+0x000000001ab5f000 	/usr/lib/libSystem.B.dylib
+0x000000001ab5f000 	/usr/lib/libobjc.A.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+0x000000001ab5f000 	/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+0x000000001ab5f000 	/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+0x000000001ab5f000 	/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/RemoteViewServices.framework/Versions/A/RemoteViewServices
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/XCTTargetBootstrap.framework/Versions/A/XCTTargetBootstrap
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices
+0x000000001ab5f000 	/System/Library/Frameworks/Metal.framework/Versions/A/Metal
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+0x000000001ab5f000 	/usr/lib/libenergytrace.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+0x000000001ab5f000 	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate
+0x000000001ab5f000 	/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation
+0x000000001ab5f000 	/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+0x000000001ab5f000 	/System/Library/Frameworks/AudioUnit.framework/Versions/A/AudioUnit
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+0x000000001ab5f000 	/usr/lib/libicucore.A.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition
+0x000000001ab5f000 	/usr/lib/libauto.dylib
+0x000000001ab5f000 	/usr/lib/libxml2.2.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI
+0x000000001ab5f000 	/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+0x000000001ab5f000 	/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+0x000000001ab5f000 	/usr/lib/liblangid.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport
+0x000000001ab5f000 	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+0x000000001ab5f000 	/usr/lib/libDiagnosticMessagesClient.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
+0x000000001ab5f000 	/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync
+0x000000001ab5f000 	/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage
+0x000000001ab5f000 	/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText
+0x000000001ab5f000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/Backup.framework/Versions/A/Backup
+0x000000001ab5f000 	/usr/lib/libarchive.2.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+0x000000001ab5f000 	/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+0x000000001ab5f000 	/usr/lib/libCRFSuite.dylib
+0x000000001ab5f000 	/usr/lib/libc++.1.dylib
+0x000000001ab5f000 	/usr/lib/libc++abi.dylib
+0x000000001ab5f000 	/usr/lib/system/libcache.dylib
+0x000000001ab5f000 	/usr/lib/system/libcommonCrypto.dylib
+0x000000001ab5f000 	/usr/lib/system/libcompiler_rt.dylib
+0x000000001ab5f000 	/usr/lib/system/libcopyfile.dylib
+0x000000001ab5f000 	/usr/lib/system/libcorecrypto.dylib
+0x000000001ab5f000 	/usr/lib/system/libdispatch.dylib
+0x000000001ab5f000 	/usr/lib/system/libdyld.dylib
+0x000000001ab5f000 	/usr/lib/system/libkeymgr.dylib
+0x000000001ab5f000 	/usr/lib/system/liblaunch.dylib
+0x000000001ab5f000 	/usr/lib/system/libmacho.dylib
+0x000000001ab5f000 	/usr/lib/system/libquarantine.dylib
+0x000000001ab5f000 	/usr/lib/system/libremovefile.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_asl.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_blocks.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_c.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_configuration.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_coreservices.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_darwin.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_dnssd.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_info.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_m.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_malloc.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_networkextension.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_notify.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_sandbox.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_secinit.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_kernel.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_platform.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_pthread.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_symptoms.dylib
+0x000000001ab5f000 	/usr/lib/system/libsystem_trace.dylib
+0x000000001ab5f000 	/usr/lib/system/libunwind.dylib
+0x000000001ab5f000 	/usr/lib/system/libxpc.dylib
+0x000000001ab5f000 	/usr/lib/libbsm.0.dylib
+0x000000001ab5f000 	/usr/lib/system/libkxld.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression
+0x000000001ab5f000 	/usr/lib/libOpenScriptingUtil.dylib
+0x000000001ab5f000 	/usr/lib/libcoretls.dylib
+0x000000001ab5f000 	/usr/lib/libcoretls_cfhelpers.dylib
+0x000000001ab5f000 	/usr/lib/libpam.2.dylib
+0x000000001ab5f000 	/usr/lib/libsqlite3.dylib
+0x000000001ab5f000 	/usr/lib/libxar.1.dylib
+0x000000001ab5f000 	/usr/lib/libbz2.1.0.dylib
+0x000000001ab5f000 	/usr/lib/liblzma.5.dylib
+0x000000001ab5f000 	/usr/lib/libnetwork.dylib
+0x000000001ab5f000 	/usr/lib/libapple_nghttp2.dylib
+0x000000001ab5f000 	/usr/lib/libpcap.A.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+0x000000001ab5f000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList
+0x000000001ab5f000 	/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities
+0x000000001ab5f000 	/usr/lib/libmecabra.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+0x000000001ab5f000 	/usr/lib/libcompression.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay
+0x000000001ab5f000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework/Versions/A/MPSCore
+0x000000001ab5f000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSImage.framework/Versions/A/MPSImage
+0x000000001ab5f000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork
+0x000000001ab5f000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix
+0x000000001ab5f000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary
+0x000000001ab5f000 	/usr/lib/libMobileGestalt.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/FaceCore.framework/Versions/A/FaceCore
+0x000000001ab5f000 	/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL
+0x000000001ab5f000 	/usr/lib/libFosl_dynamic.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontParser.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib
+0x000000001ab5f000 	/usr/lib/libcups.2.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos
+0x000000001ab5f000 	/System/Library/Frameworks/GSS.framework/Versions/A/GSS
+0x000000001ab5f000 	/usr/lib/libresolv.9.dylib
+0x000000001ab5f000 	/usr/lib/libiconv.2.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal
+0x000000001ab5f000 	/usr/lib/libheimdal-asn1.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth
+0x000000001ab5f000 	/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory
+0x000000001ab5f000 	/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS
+0x000000001ab5f000 	/usr/lib/libutil.dylib
+0x000000001ab5f000 	/usr/lib/libcharset.1.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard
+0x000000001ab5f000 	/usr/lib/libmecab.1.0.0.dylib
+0x000000001ab5f000 	/usr/lib/libgermantok.dylib
+0x000000001ab5f000 	/usr/lib/libThaiTokenizer.dylib
+0x000000001ab5f000 	/usr/lib/libChineseTokenizer.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/LanguageModeling.framework/Versions/A/LanguageModeling
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData
+0x000000001ab5f000 	/usr/lib/libcmph.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/ServiceManagement.framework/Versions/A/ServiceManagement
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement
+0x000000001ab5f000 	/usr/lib/libxslt.1.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Ink.framework/Versions/A/Ink
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/TextureIO.framework/Versions/A/TextureIO
+0x000000001ab5f000 	/usr/lib/libate.dylib
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/Sharing.framework/Versions/A/Sharing
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Apple80211
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CoreUtils.framework/Versions/A/CoreUtils
+0x000000001ab5f000 	/System/Library/Frameworks/CoreWLAN.framework/Versions/A/CoreWLAN
+0x000000001ab5f000 	/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/ROCKit.framework/Versions/A/ROCKit
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CoreWiFi.framework/Versions/A/CoreWiFi
+0x000000001ab5f000 	/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore
+0x0000000110062000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/server/libjvm.dylib
+0x000000001ab5f000 	/usr/lib/libstdc++.6.dylib
+0x000000010e220000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libverify.dylib
+0x000000010e22e000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libjava.dylib
+0x000000010e264000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libinstrument.dylib
+0x000000010e2b9000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libjdwp.dylib
+0x000000010e304000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libnpt.dylib
+0x000000010e351000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libzip.dylib
+0x000000001ab5f000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaRuntimeSupport.framework/Versions/A/JavaRuntimeSupport
+0x000000001ab5f000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework/Versions/A/JavaNativeFoundation
+0x000000001ab5f000 	/System/Library/Frameworks/JavaVM.framework/Versions/A/JavaVM
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+0x000000001ab5f000 	/System/Library/PrivateFrameworks/JavaLaunching.framework/Versions/A/JavaLaunching
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CommonPanels.framework/Versions/A/CommonPanels
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Help.framework/Versions/A/Help
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/ImageCapture.framework/Versions/A/ImageCapture
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Print
+0x000000001ab5f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+0x000000012ce87000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libdt_socket.dylib
+0x000000012ce95000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libmanagement.dylib
+0x000000012cea3000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libnet.dylib
+0x000000012cf02000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libnio.dylib
+0x000000012d535000 	/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/libsunec.dylib
+
+VM Arguments:
+jvm_args: -Djava.util.logging.config.file=/Users/vnavozenko/Library/Caches/IntelliJIdea2018.2/tomcat/Unnamed_dreambanking_2/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -javaagent:/Users/vnavozenko/programs/apache-tomee-plume-1.7.4/lib/openejb-javaagent.jar -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:49840,suspend=y,server=n -javaagent:/Users/vnavozenko/Library/Caches/IntelliJIdea2018.2/captureAgent/debugger-agent.jar=file:/private/var/folders/78/kx5ptw7x089188s3ct4wbgzm0000gn/T/capture32.props -Dcom.sun.management.jmxremote= -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=127.0.0.1 -Dtomee.serialization.class.whitelist= -Dtomee.serialization.class.blacklist=- -Djava.endorsed.dirs=/Users/vnavozenko/programs/apache-tomee-plume-1.7.4/endorsed -Dcatalina.base=/Users/vnavozenko/Library/Caches/IntelliJIdea2018.2/tomcat/Unnamed_dreambanking_2 -Dcatalina.home=/Users/vnavozenko/programs/apache-tomee-plume-1.7.4 -Djava.io.tmpdir=/Users/vnavozenko/programs/apache-tomee-plume-1.7.4/temp 
+java_command: org.apache.catalina.startup.Bootstrap start
+java_class_path (initial): /Users/vnavozenko/programs/apache-tomee-plume-1.7.4/bin/bootstrap.jar:/Users/vnavozenko/programs/apache-tomee-plume-1.7.4/bin/tomcat-juli.jar:/Users/vnavozenko/programs/apache-tomee-plume-1.7.4/lib/openejb-javaagent.jar:/Users/vnavozenko/Library/Caches/IntelliJIdea2018.2/captureAgent/debugger-agent.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home
+JRE_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home
+CLASSPATH=/Users/vnavozenko/programs/apache-tomee-plume-1.7.4/bin/bootstrap.jar:/Users/vnavozenko/programs/apache-tomee-plume-1.7.4/bin/tomcat-juli.jar
+PATH=/Users/vnavozenko/.rvm/gems/ruby-2.4.1/bin:/Users/vnavozenko/.rvm/gems/ruby-2.4.1@global/bin:/Users/vnavozenko/.rvm/rubies/ruby-2.4.1/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Users/vnavozenko/programs/scala/activator-1.3.10-minimal/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Users/vnavozenko/programs/grails-2.5.5/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/bin:/Users/vnavozenko/programs/bin:/Users/vnavozenko/.sdkman/candidates/groovy/current/bin:/Users/vnavozenko/.rvm/bin
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.dylib+0x5a6d31], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_ONSTACK|SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.dylib+0x5a6d31], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.dylib+0x480a40], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.dylib+0x480a40], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.dylib+0x480a40], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.dylib+0x480a40], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.dylib+0x48055e], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.dylib+0x47eb35], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.dylib+0x47eb35], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.dylib+0x47eb35], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.dylib+0x47eb35], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Bsduname:Darwin 18.2.0 Darwin Kernel Version 18.2.0: Fri Oct  5 19:41:49 PDT 2018; root:xnu-4903.221.2~2/RELEASE_X86_64 x86_64
+rlimit: STACK 8192k, CORE 0k, NPROC 1418, NOFILE 10240, AS infinity
+load average:5.31 5.45 5.53
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 70 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 16777216k(49608k free)
+
+/proc/meminfo:
+
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.65-b01) for bsd-amd64 JRE (1.8.0_65-b17), built on Oct  6 2015 15:36:46 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+
+time: Thu Nov  8 15:39:04 2018
+elapsed time: 267 seconds (0d 0h 4m 27s)
+

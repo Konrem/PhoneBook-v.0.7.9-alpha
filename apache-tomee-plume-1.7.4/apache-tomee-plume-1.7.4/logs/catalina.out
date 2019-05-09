@@ -1,0 +1,452 @@
+фев 15, 2019 12:59:23 PM org.apache.openejb.persistence.PersistenceBootstrap getDefaultProvider
+INFO: Default JPA Provider changed to org.eclipse.persistence.jpa.PersistenceProvider
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.SetAllPropertiesRule begin
+WARNING: [SetAllPropertiesRule]{Server/Service/Connector} Setting property 'maxSpareThreads' to '75' did not find a matching property.
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat (TomEE)/7.0.68 (1.7.4)
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Feb 8 2016 20:25:54 UTC
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.68.0
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Mac OS X
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.14.2
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          x86_64
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/jre
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_201-b09
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /Users/illia/Projects/apache-tomee-plume-1.7.4
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /Users/illia/Projects/apache-tomee-plume-1.7.4
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/Users/illia/Projects/apache-tomee-plume-1.7.4/conf/logging.properties
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -javaagent:/Users/illia/Projects/apache-tomee-plume-1.7.4/lib/openejb-javaagent.jar
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/Users/illia/Projects/apache-tomee-plume-1.7.4/endorsed
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/Users/illia/Projects/apache-tomee-plume-1.7.4
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/Users/illia/Projects/apache-tomee-plume-1.7.4
+фев 15, 2019 12:59:23 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/Users/illia/Projects/apache-tomee-plume-1.7.4/temp
+фев 15, 2019 12:59:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+фев 15, 2019 12:59:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-4443"]
+фев 15, 2019 12:59:24 PM org.apache.tomcat.util.net.jsse.JSSESocketFactory getStore
+SEVERE: Failed to load keystore type JKS with path /opt/ssl3/dbanking_grupanewage.keystore due to /opt/ssl3/dbanking_grupanewage.keystore (No such file or directory)
+java.io.FileNotFoundException: /opt/ssl3/dbanking_grupanewage.keystore (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at java.net.URL.openStream(URL.java:1045)
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:81)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getStore(JSSESocketFactory.java:433)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeystore(JSSESocketFactory.java:344)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeyManagers(JSSESocketFactory.java:597)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeyManagers(JSSESocketFactory.java:537)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.init(JSSESocketFactory.java:482)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.createSocket(JSSESocketFactory.java:218)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:400)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:650)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:560)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:820)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:642)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:667)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:253)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:427)
+
+фев 15, 2019 12:59:24 PM org.apache.coyote.AbstractProtocol init
+SEVERE: Failed to initialize end point associated with ProtocolHandler ["http-bio-4443"]
+java.io.FileNotFoundException: /opt/ssl3/dbanking_grupanewage.keystore (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at java.net.URL.openStream(URL.java:1045)
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:81)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getStore(JSSESocketFactory.java:433)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeystore(JSSESocketFactory.java:344)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeyManagers(JSSESocketFactory.java:597)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeyManagers(JSSESocketFactory.java:537)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.init(JSSESocketFactory.java:482)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.createSocket(JSSESocketFactory.java:218)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:400)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:650)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:560)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:820)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:642)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:667)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:253)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:427)
+
+фев 15, 2019 12:59:24 PM org.apache.catalina.core.StandardService initInternal
+SEVERE: Failed to initialize connector [Connector[HTTP/1.1-4443]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-4443]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:560)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:820)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:642)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:667)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:253)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:427)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.io.FileNotFoundException: /opt/ssl3/dbanking_grupanewage.keystore (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at java.net.URL.openStream(URL.java:1045)
+	at org.apache.tomcat.util.file.ConfigFileLoader.getInputStream(ConfigFileLoader.java:81)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getStore(JSSESocketFactory.java:433)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeystore(JSSESocketFactory.java:344)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeyManagers(JSSESocketFactory.java:597)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.getKeyManagers(JSSESocketFactory.java:537)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.init(JSSESocketFactory.java:482)
+	at org.apache.tomcat.util.net.jsse.JSSESocketFactory.createSocket(JSSESocketFactory.java:218)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:400)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:650)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	... 13 more
+
+фев 15, 2019 12:59:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+фев 15, 2019 12:59:24 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: OpenEJB http://tomee.apache.org/
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Startup: Fri Feb 15 12:59:24 EET 2019
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Copyright 1999-2015 (C) Apache OpenEJB/TomEE Project, All Rights Reserved.
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Version: 4.7.4
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build date: 20160304
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build time: 09:05
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.home = /Users/illia/Projects/apache-tomee-plume-1.7.4
+фев 15, 2019 12:59:24 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.base = /Users/illia/Projects/apache-tomee-plume-1.7.4
+фев 15, 2019 12:59:24 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@4387b79e
+фев 15, 2019 12:59:24 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Succeeded in installing singleton service
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.ConfigurationFactory init
+INFO: openejb configuration file is '/Users/illia/Projects/apache-tomee-plume-1.7.4/conf/tomee.xml'
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=myDataSource, type=Resource, provider-id=Default JDBC Database)
+фев 15, 2019 12:59:24 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.system.apps=true'
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: openejb
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Using openejb.deploymentId.format '{ejbName}'
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb openejb/Deployer: EjbDeployment(deployment-id=openejb/Deployer)
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb openejb/ConfigurationInfo: EjbDeployment(deployment-id=openejb/ConfigurationInfo)
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb MEJB: EjbDeployment(deployment-id=MEJB)
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.AutoConfig createContainer
+INFO: Auto-creating a container for bean openejb/Deployer: Container(type=STATELESS, id=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "openejb" loaded.
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating TransactionManager(id=Default Transaction Manager)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating SecurityService(id=Tomcat Security Service)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=myDataSource)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Container(id=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler createAppClassLoader
+INFO: Not creating another application classloader for openejb
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: openejb
+фев 15, 2019 12:59:24 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.jndiname.format={deploymentId}{interfaceType.openejbLegacyName}'
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=openejb/DeployerBusinessRemote) --> Ejb(deployment-id=openejb/Deployer)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/Deployer!org.apache.openejb.assembler.Deployer) --> Ejb(deployment-id=openejb/Deployer)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/Deployer) --> Ejb(deployment-id=openejb/Deployer)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=openejb/ConfigurationInfoBusinessRemote) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/ConfigurationInfo!org.apache.openejb.assembler.classic.cmd.ConfigurationInfo) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/ConfigurationInfo) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=MEJB) --> Ejb(deployment-id=MEJB)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/MEJB!javax.management.j2ee.ManagementHome) --> Ejb(deployment-id=MEJB)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/MEJB) --> Ejb(deployment-id=MEJB)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFO: Created Ejb(deployment-id=MEJB, ejb-name=MEJB, container=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFO: Created Ejb(deployment-id=openejb/ConfigurationInfo, ejb-name=openejb/ConfigurationInfo, container=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFO: Created Ejb(deployment-id=openejb/Deployer, ejb-name=openejb/Deployer, container=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFO: Started Ejb(deployment-id=MEJB, ejb-name=MEJB, container=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFO: Started Ejb(deployment-id=openejb/ConfigurationInfo, ejb-name=openejb/ConfigurationInfo, container=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler startEjbs
+INFO: Started Ejb(deployment-id=openejb/Deployer, ejb-name=openejb/Deployer, container=Default Stateless Container)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler deployMBean
+INFO: Deployed MBean(openejb.user.mbeans:application=openejb,group=org.apache.openejb.assembler.monitoring,name=JMXDeployer)
+фев 15, 2019 12:59:24 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=openejb)
+фев 15, 2019 12:59:25 PM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf)
+фев 15, 2019 12:59:25 PM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf-rs)
+фев 15, 2019 12:59:25 PM org.apache.openejb.server.SimpleServiceManager start
+INFO:   ** Bound Services **
+фев 15, 2019 12:59:25 PM org.apache.openejb.server.SimpleServiceManager printRow
+INFO:   NAME                 IP              PORT  
+фев 15, 2019 12:59:25 PM org.apache.openejb.server.SimpleServiceManager start
+INFO: -------
+фев 15, 2019 12:59:25 PM org.apache.openejb.server.SimpleServiceManager start
+INFO: Ready!
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1694 ms
+фев 15, 2019 12:59:25 PM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
+INFO: Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+фев 15, 2019 12:59:25 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=UserDatabase)
+фев 15, 2019 12:59:25 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+фев 15, 2019 12:59:25 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat (TomEE)/7.0.68 (1.7.4)
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs
+фев 15, 2019 12:59:25 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: ------------------------- localhost -> /docs
+фев 15, 2019 12:59:25 PM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs
+фев 15, 2019 12:59:25 PM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs" loaded.
+фев 15, 2019 12:59:25 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@4387b79e
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+фев 15, 2019 12:59:25 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+фев 15, 2019 12:59:25 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+фев 15, 2019 12:59:25 PM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
+INFO: All injection points were validated successfully.
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 81 ms.
+фев 15, 2019 12:59:25 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs)
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs has finished in 512 ms
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager
+фев 15, 2019 12:59:25 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: ------------------------- localhost -> /manager
+фев 15, 2019 12:59:25 PM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager
+фев 15, 2019 12:59:25 PM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager" loaded.
+фев 15, 2019 12:59:25 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@4387b79e
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+фев 15, 2019 12:59:25 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+фев 15, 2019 12:59:25 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+фев 15, 2019 12:59:25 PM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
+INFO: All injection points were validated successfully.
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 5 ms.
+фев 15, 2019 12:59:25 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
+INFO: using context file /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager/META-INF/context.xml
+фев 15, 2019 12:59:25 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager)
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager has finished in 133 ms
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT
+фев 15, 2019 12:59:25 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: ------------------------- localhost -> /
+фев 15, 2019 12:59:25 PM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT
+фев 15, 2019 12:59:25 PM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT" loaded.
+фев 15, 2019 12:59:25 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@4387b79e
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+фев 15, 2019 12:59:25 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+фев 15, 2019 12:59:25 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+фев 15, 2019 12:59:25 PM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
+INFO: All injection points were validated successfully.
+фев 15, 2019 12:59:25 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 4 ms.
+фев 15, 2019 12:59:25 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT)
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT has finished in 87 ms
+фев 15, 2019 12:59:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager
+фев 15, 2019 12:59:25 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: ------------------------- localhost -> /host-manager
+фев 15, 2019 12:59:25 PM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager
+фев 15, 2019 12:59:26 PM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager" loaded.
+фев 15, 2019 12:59:26 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager
+фев 15, 2019 12:59:26 PM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@4387b79e
+фев 15, 2019 12:59:26 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+фев 15, 2019 12:59:26 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+фев 15, 2019 12:59:26 PM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+фев 15, 2019 12:59:26 PM org.apache.webbeans.config.BeansDeployer validateInjectionPoints
+INFO: All injection points were validated successfully.
+фев 15, 2019 12:59:26 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 5 ms.
+фев 15, 2019 12:59:26 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
+INFO: using context file /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager/META-INF/context.xml
+фев 15, 2019 12:59:26 PM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=/Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager)
+фев 15, 2019 12:59:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager has finished in 93 ms
+фев 15, 2019 12:59:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+фев 15, 2019 12:59:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+фев 15, 2019 12:59:26 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 866 ms
+фев 15, 2019 1:12:23 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-4443"]
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+фев 15, 2019 1:12:23 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs
+фев 15, 2019 1:12:23 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openjpa.Log=org.apache.openejb.openjpa.JULOpenJPALogFactory'
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeployed app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/docs
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager
+фев 15, 2019 1:12:23 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openjpa.Log=org.apache.openejb.openjpa.JULOpenJPALogFactory'
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeployed app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/manager
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT
+фев 15, 2019 1:12:23 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openjpa.Log=org.apache.openejb.openjpa.JULOpenJPALogFactory'
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeployed app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/ROOT
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager
+фев 15, 2019 1:12:23 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openjpa.Log=org.apache.openejb.openjpa.JULOpenJPALogFactory'
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeployed app: /Users/illia/Projects/apache-tomee-plume-1.7.4/webapps/host-manager
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+фев 15, 2019 1:12:23 PM org.apache.openejb.server.SimpleServiceManager stop
+INFO: Stopping server services
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: openejb
+фев 15, 2019 1:12:23 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openjpa.Log=org.apache.openejb.openjpa.JULOpenJPALogFactory'
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeployed app: openejb
+фев 15, 2019 1:12:23 PM org.apache.openejb.assembler.classic.Assembler destroyResource
+INFO: Closing DataSource: myDataSource
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-4443"]
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-4443"]
+фев 15, 2019 1:12:23 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

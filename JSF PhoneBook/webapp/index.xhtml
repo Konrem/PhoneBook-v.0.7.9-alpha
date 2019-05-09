@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+    <h:head>
+        <title>PhoneBook</title>
+        <style>
+            #tabl {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            }
+            .btn{
+                font-weight: 400;
+                text-decoration: none;
+                padding: 3px 5px;
+                border-radius: 3px;
+            }
+            td{
+                min-height: 35px;
+                text-align: center;
+                margin: auto auto;
+                padding: 3px 5px;
+            }
+            .add{
+                background: black;
+                color: white;
+            }
+            .add-main{
+                position: absolute;
+                top:25px;
+                right: 40px;
+                padding: .8em 1em calc(.8em + 3px);
+                font-weight: 650;
+                background: black;
+                color: white;
+            }
+            .update{
+                background: green;
+                color: white;
+            }
+            .delete{
+                background: red;
+                color: white;
+            }
+            .edit{
+                background: lawngreen;
+                color: white;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            .dialog{
+                position: relative;
+                min-height: 150px ;
+                min-width: 400px;
+            }
+.text{
+    position: absolute;
+    left: 0;
+}
+            .input{
+                position: absolute;
+right: 0;
+            }
+
+        </style>
+    </h:head>
+
+    <h:body>
+        <ui:include src="header.xhtml"/>
+        <h:panelGrid>
+            <p:commandLink styleClass="btn add-main" value="Add" type="button" onclick="PF('dlg1').show();"/>
+            <h:panelGroup>
+                <h:form>
+                    <h:panelGrid columns="1" cellpadding="5">
+
+
+                    </h:panelGrid>
+                    <p:dialog header="Add Dialog" id="added" styleClass="dialog" widgetVar="dlg1" modal="true">
+                        <h:outputText styleClass="text" value="Enter First name:"/>
+                        <h:inputText styleClass="input"
+                                     value="#{dialogBean.firstName}"></h:inputText>
+                        <br/>
+                        <h:outputText styleClass="text" value="Enter Second name:"/>
+                        <h:inputText styleClass="input"
+                                     value="#{dialogBean.secondName}"></h:inputText>
+                        <br/>
+                        <p:outputLabel for="phone" styleClass="text" value="Enter Phone:"/>
+                        <p:inputMask id="phone" styleClass="input" value="#{dialogBean.phone}" mask="(999) 999-99-99"/>
+                        <br/>
+                        <p:commandLink styleClass="btn edit" value="Add" type="button" action="#{dialogBean.showMessage}" update=":tabl:display"/>
+                    <br/>
+                    </p:dialog>
+
+
+                </h:form>
+                <h:form id="tabl">
+                    <h:dataTable id="display" value="#{bookBean.books}" var="book" border="2">
+
+                        <h:column>
+                            <f:facet name="header">ID</f:facet>
+                            #{book.id}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">First Name</f:facet>
+                            #{book.firstName}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Second Name</f:facet>
+                            #{book.secondName}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Phone</f:facet>
+                            #{book.phone}
+                        </h:column>
+                        <h:column>
+
+                            <p:commandLink  styleClass="btn update" value="Update" type="button" action="#{dialogBean.preEdit(book.id)}"
+                                             update=":form:modal"/>
+                        </h:column>
+                        <h:column>
+                            <p:commandLink styleClass="btn delete"  value="Delete" type="button" action="#{dialogBean.preDelete(book.id)}" update=":tabl"/>
+                        </h:column>
+
+                    </h:dataTable>
+                </h:form>
+                <h:form id="form">
+                    <p:dialog header="Update Dialog" id="modal" styleClass="dialog" widgetVar="dlg2" modal="true">
+                        <h:outputText styleClass="text" value="First name:"/>
+                        <h:inputText styleClass="input" placeholder="#{dialogBean.firstName}"
+                                     value="#{dialogBean.firstName}"></h:inputText>
+                        <br/>
+                        <h:outputText styleClass="text" value="Second name:"/>
+                        <h:inputText styleClass="input" placeholder="#{dialogBean.firstName}"
+                                     value="#{dialogBean.secondName}"></h:inputText>
+                        <br/>
+                        <p:outputLabel for="phone" styleClass="text" value="Phone:"/>
+                        <p:inputMask id="phone" styleClass="input" placeholder="#{dialogBean.phone}" value="#{dialogBean.phone}" mask="(999) 999-99-99"/>
+                        <br/>
+                        <p:commandLink styleClass="btn edit" value="Edit" type="button" action="#{dialogBean.edit}" update=":tabl:display"/>
+                        <br/>
+                    </p:dialog>
+
+
+                </h:form>
+            </h:panelGroup>
+
+        </h:panelGrid>
+        <ui:include src="footer.xhtml"/>
+    </h:body>
+</f:view>
+
+</html>
